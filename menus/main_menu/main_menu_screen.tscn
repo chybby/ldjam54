@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmcgmyith6826"]
+
+[ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
+
+[node name="MainMenuScreen" type="CanvasLayer"]
+script = ExtResource("1_imu6r")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press Me!"
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hello, World!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="." method="on_button_pressed"]
