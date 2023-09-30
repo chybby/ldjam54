@@ -110,6 +110,7 @@ func uproot_plant(coords: Vector2i) -> Node2D:
 
 
 func handle_click(coords: Vector2i) -> void:
+    print("click")
     var held_item_manager = get_tree().get_first_node_in_group("held_item_manager")
     if held_item_manager == null:
         return

@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvmbvjlxbfrav"]
+[gd_scene load_steps=7 format=3 uid="uid://bwwas8ijbvm44"]
 
-[ext_resource type="Script" path="res://scenes/plant/sprig_plant/sprig_plant.gd" id="1_1ukpb"]
-[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="2_rh1ha"]
+[ext_resource type="Script" path="res://scenes/plant/grass_plant/grass_plant.gd" id="1_qeuyr"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="2_6mt3i"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001
@@ -84,11 +84,11 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
-atlas = ExtResource("2_rh1ha")
-region = Rect2(69, 1, 16, 16)
+atlas = ExtResource("2_6mt3i")
+region = Rect2(137, 1, 16, 16)
 
-[node name="SprigPlant" type="Node2D"]
-script = ExtResource("1_1ukpb")
+[node name="GrassPlant" type="Node2D"]
+script = ExtResource("1_qeuyr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "sway"

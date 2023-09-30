@@ -4,6 +4,8 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1ap5"]
 texture = ExtResource("1_kqcja")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
 0:0/0 = 0
 0:0/0/custom_data_1 = -1
 1:0/0 = 0
@@ -12,15 +14,6 @@ texture = ExtResource("1_kqcja")
 2:0/0 = 0
 2:0/0/custom_data_0 = 2
 2:0/0/custom_data_1 = -1
-0:1/0 = 0
-0:1/0/custom_data_0 = -1
-0:1/0/custom_data_1 = -1
-1:1/0 = 0
-1:1/0/custom_data_0 = -1
-1:1/0/custom_data_1 = -1
-2:1/0 = 0
-2:1/0/custom_data_0 = -1
-2:1/0/custom_data_1 = -1
 3:0/0 = 0
 3:0/0/custom_data_0 = -1
 

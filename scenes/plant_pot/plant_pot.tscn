@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y620r"]
 atlas = ExtResource("1_wpmcc")
-region = Rect2(48, 16, 16, 16)
+region = Rect2(120, 1, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxv1f"]
 size = Vector2(16, 26)

@@ -24,9 +24,9 @@ func is_empty() -> bool:
     return plant == null
 
 
-func add_plant(plant: Node2D) -> void:
-    plant_position.add_child(plant)
-    plant.position = Vector2.ZERO
+func add_plant(new_plant: Node2D) -> void:
+    plant_position.add_child(new_plant)
+    new_plant.position = Vector2.ZERO
 
 
 func handle_click() -> void:
