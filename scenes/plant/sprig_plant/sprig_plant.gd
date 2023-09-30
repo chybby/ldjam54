@@ -1,6 +1,7 @@
 extends Node2D
 
 var is_satisfied := false
+const info_text := "Needs an edge"
 
 
 func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bool:
@@ -12,3 +13,11 @@ func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bo
 
     is_satisfied = false
     return false
+
+func _on_area_2d_mouse_entered():
+    print("spring entered")
+    GameEvents.emit_plant_area_entered(info_text)
+
+func _on_area_2d_mouse_exited():
+    print("sprig exited")
+    GameEvents.emit_plant_area_exited()
