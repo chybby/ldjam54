@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sxcnt"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_4eoin"]
-[ext_resource type="PackedScene" uid="uid://v0x1tjw0opc2" path="res://scenes/plant_pot/plant_pot.tscn" id="2_huanr"]
+[ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="2_huanr"]
 [ext_resource type="PackedScene" uid="uid://bh20tqabd3h7l" path="res://scenes/levels/level_2.tscn" id="2_jh8xc"]
-[ext_resource type="PackedScene" uid="uid://bwwas8ijbvm44" path="res://scenes/plant/grass_plant/grass_plant.tscn" id="4_ie7df"]
+[ext_resource type="PackedScene" uid="uid://6yjj44utwyud" path="res://scenes/plant/grass_plant/grass_plant.tscn" id="4_ie7df"]
 
 [node name="Level1" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
 scale = Vector2(2, 2)
@@ -15,12 +15,11 @@ next_level_scene = ExtResource("2_jh8xc")
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("2_4eoin")]
 layer_0/tile_data = PackedInt32Array(196612, 65536, 0, 196613, 65536, 0, 131077, 65536, 0, 131076, 65536, 0)
-layer_1/tile_data = PackedInt32Array()
 
 [node name="PlantPot" parent="." instance=ExtResource("2_huanr")]
-position = Vector2(26, 51.5)
+position = Vector2(34.5, 50.5)
 initial_plant_scene = ExtResource("4_ie7df")
 
 [node name="PlantPot2" parent="." instance=ExtResource("2_huanr")]
-position = Vector2(138, 51)
+position = Vector2(125.5, 51)
 initial_plant_scene = ExtResource("4_ie7df")

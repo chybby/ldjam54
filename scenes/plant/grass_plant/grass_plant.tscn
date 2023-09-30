@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwwas8ijbvm44"]
+[gd_scene load_steps=7 format=3 uid="uid://6yjj44utwyud"]
 
 [ext_resource type="Script" path="res://scenes/plant/grass_plant/grass_plant.gd" id="1_qeuyr"]
-[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="2_6mt3i"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_8xnhi"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001
@@ -84,7 +84,7 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
-atlas = ExtResource("2_6mt3i")
+atlas = ExtResource("2_8xnhi")
 region = Rect2(137, 1, 16, 16)
 
 [node name="GrassPlant" type="Node2D"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvsowww6en4xj"]
+[gd_scene load_steps=7 format=3 uid="uid://bb4f47h4d3ukq"]
 
 [ext_resource type="Script" path="res://scenes/plant/fern_plant/fern_plant.gd" id="1_rotys"]
-[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="2_6bnde"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_pr5be"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001
@@ -84,7 +84,7 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
-atlas = ExtResource("2_6bnde")
+atlas = ExtResource("2_pr5be")
 region = Rect2(86, 1, 16, 16)
 
 [node name="FernPlant" type="Node2D"]

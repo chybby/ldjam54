@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://xcqu28ctvhk2"]
 
-[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="1_kqcja"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="1_ar7s0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1ap5"]
-texture = ExtResource("1_kqcja")
+texture = ExtResource("1_ar7s0")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -16,6 +16,7 @@ separation = Vector2i(1, 1)
 2:0/0/custom_data_1 = -1
 3:0/0 = 0
 3:0/0/custom_data_0 = -1
+9:0/0 = 0
 
 [resource]
 custom_data_layer_0/name = "soil_id"

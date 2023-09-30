@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvmbvjlxbfrav"]
+[gd_scene load_steps=7 format=3 uid="uid://beaywhoxf8xw1"]
 
 [ext_resource type="Script" path="res://scenes/plant/sprig_plant/sprig_plant.gd" id="1_1ukpb"]
-[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="2_rh1ha"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_77w8u"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001
@@ -84,7 +84,7 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
-atlas = ExtResource("2_rh1ha")
+atlas = ExtResource("2_77w8u")
 region = Rect2(69, 1, 16, 16)
 
 [node name="SprigPlant" type="Node2D"]
