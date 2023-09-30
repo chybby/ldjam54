@@ -3,25 +3,23 @@
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sxcnt"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_4eoin"]
 [ext_resource type="PackedScene" uid="uid://v0x1tjw0opc2" path="res://scenes/plant_pot/plant_pot.tscn" id="2_huanr"]
-[ext_resource type="PackedScene" uid="uid://cvmbvjlxbfrav" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="4_0f546"]
-[ext_resource type="PackedScene" uid="uid://cvsowww6en4xj" path="res://scenes/plant/fern_plant/fern_plant.tscn" id="5_wcjsa"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level_2.tscn" id="2_jh8xc"]
+[ext_resource type="PackedScene" uid="uid://6yjj44utwyud" path="res://scenes/plant/grass_plant/grass_plant.tscn" id="4_ie7df"]
 
 [node name="Level1" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
+scale = Vector2(2, 2)
 script = ExtResource("1_sxcnt")
 tile_map = NodePath("TerrariumTileMap")
-plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3")]
+plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2")]
+next_level_scene = ExtResource("2_jh8xc")
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("2_4eoin")]
-layer_1/tile_data = PackedInt32Array(131075, 196608, 0)
+layer_0/tile_data = PackedInt32Array(196612, 65536, 0, 196613, 65536, 0, 131077, 65536, 0, 131076, 65536, 0)
 
 [node name="PlantPot" parent="." instance=ExtResource("2_huanr")]
-position = Vector2(27, 30)
-initial_plant_scene = ExtResource("5_wcjsa")
+position = Vector2(34.5, 50.5)
+initial_plant_scene = ExtResource("4_ie7df")
 
 [node name="PlantPot2" parent="." instance=ExtResource("2_huanr")]
-position = Vector2(29, 65)
-initial_plant_scene = ExtResource("4_0f546")
-
-[node name="PlantPot3" parent="." instance=ExtResource("2_huanr")]
-position = Vector2(143, 37)
-initial_plant_scene = ExtResource("4_0f546")
+position = Vector2(125.5, 51)
+initial_plant_scene = ExtResource("4_ie7df")

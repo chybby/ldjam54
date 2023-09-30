@@ -3,6 +3,9 @@ class_name TerrariumTileMap
 
 signal state_changed
 
+const DEFAULT_SOURCE = 0
+const CURSOR_ATLAS = Vector2i(9, 0)
+
 const SOIL_LAYER = 0
 const SOIL_SAND = 0
 const SOIL_NORMAL = 1
@@ -10,6 +13,8 @@ const SOIL_WET = 2
 
 const OBSTACLE_LAYER = 1
 const OBSTACLE_ROCK = 0
+
+const CURSOR_LAYER = 2
 
 # Nested Array of Node2D.
 var plants: Array
@@ -33,8 +38,8 @@ func calculate_size() -> Vector2i:
     return get_used_rect().end
 
 
-func get_clicked_cell_coords(click_position: Vector2):
-    var coords = local_to_map(to_local(click_position))
+func get_cell_coords(at_position: Vector2):
+    var coords = local_to_map(to_local(at_position))
     if get_cell_tile_data(SOIL_LAYER, coords) == null:
         return null
     return coords
@@ -114,9 +119,9 @@ func handle_click(coords: Vector2i) -> void:
     if held_item_manager == null:
         return
 
-    print("Soil at %s is %s" % [coords, get_soil(coords)])
-    print("Obstacle at %s is %s" % [coords, get_obstacle(coords)])
-    print("Plant at %s is %s" % [coords, get_plant(coords)])
+#    print("Soil at %s is %s" % [coords, get_soil(coords)])
+#    print("Obstacle at %s is %s" % [coords, get_obstacle(coords)])
+#    print("Plant at %s is %s" % [coords, get_plant(coords)])
 
     # TODO: swap held and clicked plants?
     if held_item_manager.held_item == null && get_plant(coords) != null:
@@ -128,8 +133,19 @@ func handle_click(coords: Vector2i) -> void:
         state_changed.emit()
 
 
+func handle_hover(coords: Vector2i) -> void:
+    if get_soil(coords) != null:
+        set_cell(CURSOR_LAYER, coords, DEFAULT_SOURCE, CURSOR_ATLAS)
+
+
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("click"):
-        var coords = get_clicked_cell_coords(event.position)
+        var coords = get_cell_coords(event.position)
         if coords != null:
             handle_click(coords)
+    elif event is InputEventMouseMotion:
+        clear_layer(CURSOR_LAYER)
+        var coords = get_cell_coords(event.position)
+        if coords != null:
+            handle_hover(coords)
+

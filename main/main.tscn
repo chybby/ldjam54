@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs0khu62hwapc"]
+[gd_scene load_steps=6 format=3 uid="uid://bs0khu62hwapc"]
 
 [ext_resource type="PackedScene" uid="uid://d0txdy4ut16pl" path="res://scenes/levels/level_1.tscn" id="1_csud4"]
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
+[ext_resource type="Script" path="res://main/Main.gd" id="1_fnt08"]
 [ext_resource type="Script" path="res://main/HUD.gd" id="3_a65wc"]
 [ext_resource type="Theme" uid="uid://bkxry10k3p8or" path="res://theme.tres" id="5_b4jnn"]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node2D"]
+script = ExtResource("1_fnt08")
+first_level_scene = ExtResource("1_csud4")
 
 [node name="Level" type="Node2D" parent="."]
-
-[node name="Level1" parent="Level" instance=ExtResource("1_csud4")]
+unique_name_in_owner = true
 
 [node name="HeldItemManager" parent="." instance=ExtResource("1_dn0dj")]
+scale = Vector2(2, 2)
 
 [node name="HUD" type="Control" parent="." node_paths=PackedStringArray("tooltip")]
 layout_mode = 3

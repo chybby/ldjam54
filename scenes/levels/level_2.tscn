@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh20tqabd3h7l"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_nfvju"]
+[ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_5to82"]
+[ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_g4dr8"]
+[ext_resource type="PackedScene" uid="uid://bb4f47h4d3ukq" path="res://scenes/plant/fern_plant/fern_plant.tscn" id="4_dpxjd"]
+[ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="5_xwvoj"]
+
+[node name="Level2" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
+scale = Vector2(2, 2)
+script = ExtResource("1_nfvju")
+tile_map = NodePath("TerrariumTileMap")
+plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3")]
+
+[node name="TerrariumTileMap" parent="." instance=ExtResource("2_5to82")]
+layer_0/tile_data = PackedInt32Array(196611, 0, 0, 196612, 131072, 0, 196613, 0, 0, 196614, 65536, 0, 131078, 65536, 0, 65542, 65536, 0, 65541, 0, 0, 65540, 131072, 0, 131076, 131072, 0, 131075, 0, 0, 65539, 0, 0, 131077, 0, 0)
+layer_1/tile_data = PackedInt32Array(196611, 196608, 0, 131077, 196608, 0)
+
+[node name="PlantPot" parent="." instance=ExtResource("3_g4dr8")]
+position = Vector2(27, 30)
+initial_plant_scene = ExtResource("4_dpxjd")
+
+[node name="PlantPot2" parent="." instance=ExtResource("3_g4dr8")]
+position = Vector2(29, 65)
+initial_plant_scene = ExtResource("5_xwvoj")
+
+[node name="PlantPot3" parent="." instance=ExtResource("3_g4dr8")]
+position = Vector2(143, 37)
+initial_plant_scene = ExtResource("5_xwvoj")
