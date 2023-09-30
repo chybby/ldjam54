@@ -17,3 +17,7 @@ func set_tooltip(text):
         next_text = ""
     else:
         tooltip.text = text
+
+func reset():
+    tooltip.text = ""
+    next_text = ""

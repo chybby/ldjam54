@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
-[ext_resource type="Theme" path="res://theme.tres" id="2_kffk4"]
+[ext_resource type="Theme" uid="uid://bkxry10k3p8or" path="res://theme.tres" id="2_kffk4"]
 
 [node name="MainMenuScreen" type="CanvasLayer"]
 script = ExtResource("1_imu6r")

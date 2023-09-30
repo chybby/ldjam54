@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://6yjj44utwyud"]
+[gd_scene load_steps=9 format=3 uid="uid://6yjj44utwyud"]
 
 [ext_resource type="Script" path="res://scenes/plant/grass_plant/grass_plant.gd" id="1_qeuyr"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_8xnhi"]
-[ext_resource type="PackedScene" uid="uid://b45521whthjmn" path="res://scenes/plant/satisfaction_particles.tscn" id="2_ubb2f"]
+[ext_resource type="PackedScene" path="res://scenes/plant/satisfaction_particles.tscn" id="2_ubb2f"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001
@@ -88,6 +88,9 @@ _data = {
 atlas = ExtResource("2_8xnhi")
 region = Rect2(137, 1, 16, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rxirf"]
+radius = 7.0
+
 [node name="GrassPlant" type="Node2D"]
 script = ExtResource("1_qeuyr")
 
@@ -102,5 +105,14 @@ position = Vector2(0, 6)
 texture = SubResource("AtlasTexture_520x6")
 offset = Vector2(0, -6)
 
+[node name="Area2D" type="Area2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_rxirf")
+
 [node name="SatisfactionParticles" parent="." node_paths=PackedStringArray("plant") instance=ExtResource("2_ubb2f")]
 plant = NodePath("..")
+
+[connection signal="mouse_entered" from="Sprite/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite/Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -3,6 +3,7 @@ extends Node2D
 @export var first_level_scene: PackedScene
 
 @onready var level: Node2D = %Level
+@onready var hud: Control = %HUD
 
 
 func _ready() -> void:
@@ -10,6 +11,7 @@ func _ready() -> void:
 
 
 func load_level(level_scene: PackedScene):
+    hud.reset()
     for child in level.get_children():
         child.queue_free()
     var level_instance = level_scene.instantiate()

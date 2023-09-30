@@ -1,6 +1,7 @@
 extends Node2D
 
-const INFO_TEXT := "Needs an empty column and row"
+const INFO_TEXT := "Needs its own column and row"
+# or maybe "Can't share a column or row with another plant"
 
 signal satisfaction_changed(satisfied: bool)
 

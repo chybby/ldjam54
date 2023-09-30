@@ -1,5 +1,7 @@
 extends Node2D
 
+const INFO_TEXT := "Needs to be on soil"
+
 signal satisfaction_changed(satisfied: bool)
 
 var is_satisfied = null
@@ -28,3 +30,10 @@ func set_satisfied(satisfied: bool) -> bool:
 func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bool:
     # Grass is satisfied if on normal soil.
     return set_satisfied(tile_map.get_soil(plant_position) == tile_map.SOIL_NORMAL)
+
+func _on_area_2d_mouse_entered():
+    GameEvents.emit_plant_area_entered(INFO_TEXT)
+
+
+func _on_area_2d_mouse_exited():
+    GameEvents.emit_plant_area_exited()

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/plant/sprig_plant/sprig_plant.gd" id="1_1ukpb"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_77w8u"]
-[ext_resource type="PackedScene" uid="uid://b45521whthjmn" path="res://scenes/plant/satisfaction_particles.tscn" id="2_dmuvm"]
+[ext_resource type="PackedScene" path="res://scenes/plant/satisfaction_particles.tscn" id="2_dmuvm"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001
