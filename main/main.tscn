@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://bs0khu62hwapc"]
 
+[ext_resource type="PackedScene" uid="uid://d0txdy4ut16pl" path="res://scenes/levels/level_1.tscn" id="1_csud4"]
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
-[ext_resource type="Script" path="res://main/Main.gd" id="1_fnt08"]
-[ext_resource type="PackedScene" uid="uid://cj0gj3heure1b" path="res://scenes/levels/level_2.tscn" id="2_552y1"]
+[ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
 [ext_resource type="Script" path="res://main/HUD.gd" id="3_a65wc"]
-[ext_resource type="Theme" uid="uid://bkxry10k3p8or" path="res://theme.tres" id="5_b4jnn"]
+[ext_resource type="Theme" path="res://theme.tres" id="5_b4jnn"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_fnt08")
-first_level_scene = ExtResource("2_552y1")
+first_level_scene = ExtResource("1_csud4")
 
 [node name="Level" type="Node2D" parent="."]
 unique_name_in_owner = true
