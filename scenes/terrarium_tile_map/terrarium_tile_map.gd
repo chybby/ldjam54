@@ -115,9 +115,9 @@ func handle_click(coords: Vector2i) -> void:
     if held_item_manager == null:
         return
 
-    print("Soil at %s is %s" % [coords, get_soil(coords)])
-    print("Obstacle at %s is %s" % [coords, get_obstacle(coords)])
-    print("Plant at %s is %s" % [coords, get_plant(coords)])
+#    print("Soil at %s is %s" % [coords, get_soil(coords)])
+#    print("Obstacle at %s is %s" % [coords, get_obstacle(coords)])
+#    print("Plant at %s is %s" % [coords, get_plant(coords)])
 
     # TODO: swap held and clicked plants?
     if held_item_manager.held_item == null && get_plant(coords) != null:

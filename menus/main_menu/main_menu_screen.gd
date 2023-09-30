@@ -1,6 +1,11 @@
 extends CanvasLayer
 
-@onready var label := %Label
+@onready var start_button: Button = %StartButton
 
-func on_button_pressed() -> void:
-    label.text = "You pressed the button!"
+
+func _ready() -> void:
+    start_button.pressed.connect(on_start_button_pressed)
+
+
+func on_start_button_pressed() -> void:
+    get_tree().change_scene_to_file("res://main/main.tscn")

@@ -19,8 +19,7 @@ func load_level(level_scene: PackedScene):
 
 
 func on_end_game() -> void:
-    # TODO
-    print("Game finished!")
+    get_tree().change_scene_to_file("res://menus/game_over/game_over_screen.tscn")
 
 
 func on_load_next_level(level_scene: PackedScene) -> void:
