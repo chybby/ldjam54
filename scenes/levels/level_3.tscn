@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1kprrqqotoej"]
+[gd_scene load_steps=6 format=3 uid="uid://cwlqb1t67iuyx"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_psoxp"]
+[ext_resource type="PackedScene" uid="uid://c1k67ltg0yn67" path="res://scenes/levels/level_4.tscn" id="2_x2bfp"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_x2qj2"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_qpyb8"]
 [ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="4_5xolx"]
 
-[node name="Level3" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
+[node name="Level4" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
 scale = Vector2(2, 2)
 script = ExtResource("1_psoxp")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3")]
+next_level_scene = ExtResource("2_x2bfp")
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("2_x2qj2")]
 layer_0/tile_data = PackedInt32Array(196612, 131072, 0, 196613, 131072, 0, 196614, 131072, 0, 131078, 131072, 0, 65542, 131072, 0, 65541, 131072, 0, 65540, 131072, 0, 131076, 131072, 0, 131077, 131072, 0)

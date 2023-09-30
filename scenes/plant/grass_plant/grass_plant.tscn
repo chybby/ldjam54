@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/plant/grass_plant/grass_plant.gd" id="1_qeuyr"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_8xnhi"]
-[ext_resource type="PackedScene" uid="uid://b45521whthjmn" path="res://scenes/plant/satisfaction_particles.tscn" id="2_ubb2f"]
-[ext_resource type="PackedScene" uid="uid://00ibm4j64unm" path="res://scenes/plant/dirt_particles.tscn" id="4_durot"]
+[ext_resource type="PackedScene" uid="uid://etodwv0g65e" path="res://scenes/plant/satisfaction_particles.tscn" id="2_ubb2f"]
+[ext_resource type="PackedScene" uid="uid://bl3e111kk7mep" path="res://scenes/plant/dirt_particles.tscn" id="4_durot"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001

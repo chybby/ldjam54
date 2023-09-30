@@ -13,6 +13,7 @@ const SOIL_WET = 2
 
 const OBSTACLE_LAYER = 1
 const OBSTACLE_ROCK = 0
+const OBSTACLE_WATER = 1
 
 const CURSOR_LAYER = 2
 
