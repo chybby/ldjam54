@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://b45521whthjmn"]
+
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="1_nk3rp"]
+[ext_resource type="Script" path="res://scenes/plant/satisfaction_particles.gd" id="1_t15gi"]
+
+[sub_resource type="Curve" id="Curve_cdjp8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.403226, 1), 0.0, 0.0, 0, 0, Vector2(0.870968, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0105263), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_205c8"]
+curve = SubResource("Curve_cdjp8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ub0u1"]
+emission_shape = 1
+emission_sphere_radius = 8.0
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 60.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 15.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.8
+scale_max = 1.2
+scale_curve = SubResource("CurveTexture_205c8")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss5of"]
+atlas = ExtResource("1_nk3rp")
+region = Rect2(171, 1, 16, 16)
+
+[sub_resource type="Curve" id="Curve_3go3u"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.258065, 1), 0.0, 0.0, 0, 0, Vector2(0.665323, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_4resv"]
+curve = SubResource("Curve_3go3u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5she4"]
+emission_shape = 1
+emission_sphere_radius = 8.0
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+gravity = Vector3(0, 40, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 15.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_4resv")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mkfs"]
+atlas = ExtResource("1_nk3rp")
+region = Rect2(188, 1, 16, 16)
+
+[node name="SatisfactionParticles" type="Node2D"]
+script = ExtResource("1_t15gi")
+
+[node name="HappyParticles" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+emitting = false
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_ub0u1")
+texture = SubResource("AtlasTexture_ss5of")
+one_shot = true
+explosiveness = 0.9
+fixed_fps = 0
+interpolate = false
+
+[node name="SadParticles" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+emitting = false
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_5she4")
+texture = SubResource("AtlasTexture_3mkfs")
+one_shot = true
+explosiveness = 0.9
+fixed_fps = 0
+interpolate = false

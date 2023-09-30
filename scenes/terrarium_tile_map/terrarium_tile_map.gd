@@ -19,11 +19,13 @@ const CURSOR_LAYER = 2
 # Nested Array of Node2D.
 var plants: Array
 
+var size: Vector2i
+
 
 func _ready() -> void:
     # This is the size of every used tile of the tilemap.
     # Not every tile is necessarily soil.
-    var size = calculate_size()
+    size = calculate_size()
     print("Calculated size: %s" % size)
 
     plants = []
@@ -88,6 +90,24 @@ func update_plants() -> void:
             print("%s at %s satisfied? %s" % [plant, coords, plant.is_satisfied])
 
 
+func get_column_coords(coord: Vector2i, include_self: bool = false) -> Array[Vector2i]:
+    var coords = [] as Array[Vector2i]
+    for y in size.y:
+        if not include_self and y == coord.y:
+            continue
+        coords.append(Vector2i(coord.x, y))
+    return coords
+
+
+func get_row_coords(coord: Vector2i, include_self: bool = false) -> Array[Vector2i]:
+    var coords = [] as Array[Vector2i]
+    for x in size.x:
+        if not include_self and x == coord.x:
+            continue
+        coords.append(Vector2i(x, coord.y))
+    return coords
+
+
 func get_surrounding_coords(coord: Vector2i, include_center: bool = false) -> Array[Vector2i]:
     var coords = [] as Array[Vector2i]
     for x in [-1, 0, 1]:
@@ -110,6 +130,8 @@ func place_plant(plant: Node2D, coords: Vector2i) -> void:
 func uproot_plant(coords: Vector2i) -> Node2D:
     var plant = plants[coords.x][coords.y] as Node2D
     plants[coords.x][coords.y] = null
+    # Don't emit the particles.
+    plant.is_satisfied = null
     update_plants()
     return plant
 
@@ -124,12 +146,20 @@ func handle_click(coords: Vector2i) -> void:
 #    print("Plant at %s is %s" % [coords, get_plant(coords)])
 
     # TODO: swap held and clicked plants?
-    if held_item_manager.held_item == null && get_plant(coords) != null:
+    if held_item_manager.held_item == null and get_plant(coords) != null:
+        # Uprooting a plant.
         held_item_manager.hold_item(uproot_plant(coords))
         # This needs to happen after the held_item_manager is updated.
         state_changed.emit()
-    elif held_item_manager.held_item != null && get_plant(coords) == null && get_obstacle(coords) == null:
+    elif held_item_manager.held_item != null and get_plant(coords) == null && get_obstacle(coords) == null:
+        # Planting a plant.
         place_plant(held_item_manager.release_item(), coords)
+        state_changed.emit()
+    elif held_item_manager.held_item != null and get_plant(coords) != null:
+        # Swapping plants.
+        var uprooted_plant = uproot_plant(coords)
+        place_plant(held_item_manager.release_item(), coords)
+        held_item_manager.hold_item(uprooted_plant)
         state_changed.emit()
 
 

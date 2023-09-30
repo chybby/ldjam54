@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb4f47h4d3ukq"]
+[gd_scene load_steps=8 format=3 uid="uid://bb4f47h4d3ukq"]
 
 [ext_resource type="Script" path="res://scenes/plant/fern_plant/fern_plant.gd" id="1_rotys"]
+[ext_resource type="PackedScene" uid="uid://b45521whthjmn" path="res://scenes/plant/satisfaction_particles.tscn" id="2_g6qoa"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_pr5be"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
@@ -100,3 +101,6 @@ libraries = {
 position = Vector2(0, 7)
 texture = SubResource("AtlasTexture_520x6")
 offset = Vector2(0, -7)
+
+[node name="SatisfactionParticles" parent="." node_paths=PackedStringArray("plant") instance=ExtResource("2_g6qoa")]
+plant = NodePath("..")

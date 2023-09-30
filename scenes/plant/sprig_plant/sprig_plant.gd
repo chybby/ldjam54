@@ -1,14 +1,25 @@
 extends Node2D
 
-var is_satisfied := false
+signal satisfaction_changed(satisfied: bool)
+
+var is_satisfied = null
+
+
+func set_satisfied(satisfied: bool) -> bool:
+    if is_satisfied != satisfied:
+        satisfaction_changed.emit(satisfied)
+    is_satisfied = satisfied
+    return satisfied
 
 
 func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bool:
-    # For example, sprig is satisfied if it's at the edge of the terrarium.
-    for coord in tile_map.get_surrounding_coords(plant_position):
-        if tile_map.get_soil(coord) == null:
-            is_satisfied = true
-            return true
+    # Sprig is satisfied if it's the only plant in its row/column.
+    for coord in tile_map.get_column_coords(plant_position):
+        if tile_map.get_plant(coord) != null:
+            return set_satisfied(false)
 
-    is_satisfied = false
-    return false
+    for coord in tile_map.get_row_coords(plant_position):
+        if tile_map.get_plant(coord) != null:
+            return set_satisfied(false)
+
+    return set_satisfied(true)
