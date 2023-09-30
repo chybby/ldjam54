@@ -1,9 +1,11 @@
+@tool
 extends Node2D
+class_name PlantPot
 
-@export var plant_scene: PackedScene
+@export var initial_plant_scene: PackedScene
 
 @onready var area_2d: Area2D = %Area2D
-@onready var plant_position: Marker2D = %PlantPosition
+@onready var plant_position: Node2D = %PlantPosition
 
 var mouse_over := false
 var plant: Node2D
@@ -13,9 +15,18 @@ func _ready() -> void:
     area_2d.mouse_entered.connect(on_mouse_entered.bind(true))
     area_2d.mouse_exited.connect(on_mouse_entered.bind(false))
 
-    plant = plant_scene.instantiate()
-    add_child(plant)
-    plant.position = plant_position.position
+    if initial_plant_scene != null:
+        plant = initial_plant_scene.instantiate()
+        add_plant(plant)
+
+
+func is_empty() -> bool:
+    return plant == null
+
+
+func add_plant(plant: Node2D) -> void:
+    plant_position.add_child(plant)
+    plant.position = Vector2.ZERO
 
 
 func handle_click() -> void:
@@ -23,13 +34,13 @@ func handle_click() -> void:
     if held_item_manager == null:
         return
 
+    # TODO: swap held and clicked plants?
     if held_item_manager.held_item == null and plant != null:
         held_item_manager.hold_item(plant)
         plant = null
     elif held_item_manager.held_item != null and plant == null:
         plant = held_item_manager.release_item()
-        add_child(plant)
-        plant.position = plant_position.position
+        add_plant(plant)
 
 
 func _input(event: InputEvent) -> void:

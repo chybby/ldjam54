@@ -1,25 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs0khu62hwapc"]
+[gd_scene load_steps=3 format=3 uid="uid://bs0khu62hwapc"]
 
+[ext_resource type="PackedScene" uid="uid://d0txdy4ut16pl" path="res://scenes/levels/level_1.tscn" id="1_csud4"]
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
-[ext_resource type="PackedScene" uid="uid://ci7texwi4caqu" path="res://scenes/terrarium/terrarium.tscn" id="1_lf3m0"]
-[ext_resource type="PackedScene" uid="uid://v0x1tjw0opc2" path="res://scenes/plant_pot/plant_pot.tscn" id="2_r7v18"]
-[ext_resource type="PackedScene" uid="uid://dkdph87cxa2cy" path="res://scenes/plant/sprig_plant.tscn" id="4_7yasm"]
 
 [node name="Main" type="Node"]
 
-[node name="Terrarium" parent="." instance=ExtResource("1_lf3m0")]
-position = Vector2(50, 19)
+[node name="Level" type="Node2D" parent="."]
 
-[node name="PlantPot" parent="." instance=ExtResource("2_r7v18")]
-position = Vector2(27, 30)
-plant_scene = ExtResource("4_7yasm")
-
-[node name="PlantPot2" parent="." instance=ExtResource("2_r7v18")]
-position = Vector2(29, 65)
-plant_scene = ExtResource("4_7yasm")
-
-[node name="PlantPot3" parent="." instance=ExtResource("2_r7v18")]
-position = Vector2(143, 37)
-plant_scene = ExtResource("4_7yasm")
+[node name="Level1" parent="Level" instance=ExtResource("1_csud4")]
 
 [node name="HeldItemManager" parent="." instance=ExtResource("1_dn0dj")]

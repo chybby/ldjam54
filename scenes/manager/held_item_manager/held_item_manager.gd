@@ -9,6 +9,10 @@ func _input(event: InputEvent) -> void:
             held_item.global_position = event.position
 
 
+func is_empty() -> bool:
+    return held_item == null
+
+
 func hold_item(item: Node2D) -> void:
     held_item = item
     item.get_parent().remove_child(item)

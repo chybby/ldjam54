@@ -1,0 +1,32 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://xcqu28ctvhk2"]
+
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="1_kqcja"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1ap5"]
+texture = ExtResource("1_kqcja")
+0:0/0 = 0
+0:0/0/custom_data_1 = -1
+1:0/0 = 0
+1:0/0/custom_data_0 = 1
+1:0/0/custom_data_1 = -1
+2:0/0 = 0
+2:0/0/custom_data_0 = 2
+2:0/0/custom_data_1 = -1
+0:1/0 = 0
+0:1/0/custom_data_0 = -1
+0:1/0/custom_data_1 = -1
+1:1/0 = 0
+1:1/0/custom_data_0 = -1
+1:1/0/custom_data_1 = -1
+2:1/0 = 0
+2:1/0/custom_data_0 = -1
+2:1/0/custom_data_1 = -1
+3:0/0 = 0
+3:0/0/custom_data_0 = -1
+
+[resource]
+custom_data_layer_0/name = "soil_id"
+custom_data_layer_0/type = 2
+custom_data_layer_1/name = "obstacle_id"
+custom_data_layer_1/type = 2
+sources/0 = SubResource("TileSetAtlasSource_d1ap5")
