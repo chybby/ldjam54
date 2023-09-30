@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh20tqabd3h7l"]
+[gd_scene load_steps=6 format=3 uid="uid://cj0gj3heure1b"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_nfvju"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_5to82"]
-[ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_g4dr8"]
-[ext_resource type="PackedScene" uid="uid://bb4f47h4d3ukq" path="res://scenes/plant/fern_plant/fern_plant.tscn" id="4_dpxjd"]
-[ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="5_xwvoj"]
+[ext_resource type="PackedScene" uid="uid://v0x1tjw0opc2" path="res://scenes/plant_pot/plant_pot.tscn" id="3_g4dr8"]
+[ext_resource type="PackedScene" uid="uid://cvsowww6en4xj" path="res://scenes/plant/fern_plant/fern_plant.tscn" id="4_dpxjd"]
+[ext_resource type="PackedScene" uid="uid://cvmbvjlxbfrav" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="5_xwvoj"]
 
 [node name="Level2" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
 scale = Vector2(2, 2)

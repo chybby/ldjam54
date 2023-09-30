@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvmbvjlxbfrav"]
 
 [ext_resource type="Script" path="res://scenes/plant/sprig_plant/sprig_plant.gd" id="1_1ukpb"]
-[ext_resource type="Texture2D" path="res://spritesheet.png" id="2_rh1ha"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_3715t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
-atlas = ExtResource("2_rh1ha")
-region = Rect2(0, 16, 16, 16)
+atlas = ExtResource("2_3715t")
+region = Rect2(69, 1, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_el8s1"]
 radius = 8.0

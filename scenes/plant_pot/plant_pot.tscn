@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://v0x1tjw0opc2"]
 
 [ext_resource type="Script" path="res://scenes/plant_pot/plant_pot.gd" id="1_4jexd"]
-[ext_resource type="Texture2D" path="res://spritesheet.png" id="1_wpmcc"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_tqxmf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y620r"]
-atlas = ExtResource("1_wpmcc")
-region = Rect2(48, 16, 16, 16)
+atlas = ExtResource("2_tqxmf")
+region = Rect2(120, 1, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxv1f"]
 size = Vector2(16, 26)

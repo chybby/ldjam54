@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sxcnt"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_4eoin"]
 [ext_resource type="PackedScene" uid="uid://v0x1tjw0opc2" path="res://scenes/plant_pot/plant_pot.tscn" id="2_huanr"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_2.tscn" id="2_jh8xc"]
+[ext_resource type="PackedScene" uid="uid://cj0gj3heure1b" path="res://scenes/levels/level_2.tscn" id="2_jh8xc"]
 [ext_resource type="PackedScene" uid="uid://6yjj44utwyud" path="res://scenes/plant/grass_plant/grass_plant.tscn" id="4_ie7df"]
 
 [node name="Level1" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
