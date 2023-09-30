@@ -1,11 +1,17 @@
 extends Node2D
 
-const INFO_TEXT := "Needs its own column and row"
-# or maybe "Can't share a column or row with another plant"
+const INFO_TEXT := "Can't share a column or row with another plant"
 
 signal satisfaction_changed(satisfied: bool)
 
+@onready var dirt_particles: GPUParticles2D = %DirtParticles
+
 var is_satisfied = null
+
+
+func emit_dirt() -> void:
+    dirt_particles.emitting = true
+    dirt_particles.restart()
 
 
 func set_satisfied(satisfied: bool) -> bool:

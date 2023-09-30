@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bb4f47h4d3ukq"]
+[gd_scene load_steps=10 format=3 uid="uid://bb4f47h4d3ukq"]
 
 [ext_resource type="Script" path="res://scenes/plant/fern_plant/fern_plant.gd" id="1_rotys"]
-[ext_resource type="PackedScene" path="res://scenes/plant/satisfaction_particles.tscn" id="2_g6qoa"]
+[ext_resource type="PackedScene" uid="uid://b45521whthjmn" path="res://scenes/plant/satisfaction_particles.tscn" id="2_g6qoa"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_pr5be"]
+[ext_resource type="PackedScene" uid="uid://00ibm4j64unm" path="res://scenes/plant/dirt_particles.tscn" id="4_sdwmu"]
 
 [sub_resource type="Animation" id="Animation_qutxt"]
 length = 0.001
@@ -107,6 +108,9 @@ offset = Vector2(0, -7)
 
 [node name="SatisfactionParticles" parent="." node_paths=PackedStringArray("plant") instance=ExtResource("2_g6qoa")]
 plant = NodePath("..")
+
+[node name="DirtParticles" parent="." instance=ExtResource("4_sdwmu")]
+unique_name_in_owner = true
 
 [node name="Area2D" type="Area2D" parent="."]
 

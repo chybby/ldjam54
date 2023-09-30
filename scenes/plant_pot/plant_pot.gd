@@ -37,6 +37,7 @@ func handle_click() -> void:
     # TODO: swap held and clicked plants?
     if held_item_manager.held_item == null and plant != null:
         held_item_manager.hold_item(plant)
+        plant.emit_dirt()
         plant = null
     elif held_item_manager.held_item != null and plant == null:
         plant = held_item_manager.release_item()

@@ -4,7 +4,14 @@ const INFO_TEXT := "Can't be next to a rock"
 
 signal satisfaction_changed(satisfied: bool)
 
+@onready var dirt_particles: GPUParticles2D = %DirtParticles
+
 var is_satisfied = null
+
+
+func emit_dirt() -> void:
+    dirt_particles.emitting = true
+    dirt_particles.restart()
 
 
 func set_satisfied(satisfied: bool) -> bool:
