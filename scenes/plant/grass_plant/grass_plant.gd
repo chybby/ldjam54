@@ -38,6 +38,7 @@ func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bo
     # Grass is satisfied if on normal soil.
     return set_satisfied(tile_map.get_soil(plant_position) == tile_map.SOIL_NORMAL)
 
+
 func _on_area_2d_mouse_entered():
     GameEvents.emit_plant_area_entered(INFO_TEXT)
 

@@ -21,8 +21,10 @@ func load_level(level_scene: PackedScene):
 
 
 func on_end_game() -> void:
-    get_tree().change_scene_to_file("res://menus/game_over/game_over_screen.tscn")
+    ScreenTransition.transition_to_scene("res://menus/game_over/game_over_screen.tscn")
 
 
 func on_load_next_level(level_scene: PackedScene) -> void:
+    ScreenTransition.transition()
+    await ScreenTransition.transitioned_halfway
     load_level(level_scene)

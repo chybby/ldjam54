@@ -35,10 +35,8 @@ func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bo
 
 
 func _on_area_2d_mouse_entered():
-    print("spring entered")
     GameEvents.emit_plant_area_entered(INFO_TEXT)
 
 
 func _on_area_2d_mouse_exited():
-    print("sprig exited")
     GameEvents.emit_plant_area_exited()

@@ -18,7 +18,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameEvents="*res://scenes/game_events.tscn"
+GameEvents="*res://auto_load/game_events/game_events.tscn"
+ScreenTransition="*res://auto_load/screen_transition/screen_transition.tscn"
 
 [display]
 
@@ -30,6 +31,9 @@ window/stretch/mode="viewport"
 
 [gui]
 
+theme/custom="res://theme.tres"
+theme/custom_font="res://Minecraftia-Regular.ttf"
+theme/default_font_antialiasing=0
 common/drop_mouse_on_gui_input_disabled=true
 
 [input]

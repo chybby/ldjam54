@@ -8,4 +8,4 @@ func _ready() -> void:
 
 
 func on_start_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://main/main.tscn")
+    ScreenTransition.transition_to_scene("res://main/main.tscn")

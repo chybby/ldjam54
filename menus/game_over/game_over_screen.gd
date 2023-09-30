@@ -10,8 +10,10 @@ func _ready() -> void:
 
 
 func on_restart_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://menus/main_menu/main_menu_screen.tscn")
+    ScreenTransition.transition_to_scene("res://menus/main_menu/main_menu_screen.tscn")
 
 
 func on_quit_button_pressed() -> void:
+    ScreenTransition.transition()
+    await ScreenTransition.transitioned_halfway
     get_tree().quit()
