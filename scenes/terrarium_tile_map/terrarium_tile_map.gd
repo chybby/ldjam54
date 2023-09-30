@@ -149,7 +149,9 @@ func handle_click(coords: Vector2i) -> void:
     # TODO: swap held and clicked plants?
     if held_item_manager.held_item == null and get_plant(coords) != null:
         # Uprooting a plant.
-        held_item_manager.hold_item(uproot_plant(coords))
+        var plant = uproot_plant(coords)
+        plant.emit_dirt()
+        held_item_manager.hold_item(plant)
         # This needs to happen after the held_item_manager is updated.
         state_changed.emit()
     elif held_item_manager.held_item != null and get_plant(coords) == null && get_obstacle(coords) == null:
@@ -159,6 +161,7 @@ func handle_click(coords: Vector2i) -> void:
     elif held_item_manager.held_item != null and get_plant(coords) != null:
         # Swapping plants.
         var uprooted_plant = uproot_plant(coords)
+        uprooted_plant.emit_dirt()
         place_plant(held_item_manager.release_item(), coords)
         held_item_manager.hold_item(uprooted_plant)
         state_changed.emit()

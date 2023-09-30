@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b45521whthjmn"]
+[gd_scene load_steps=11 format=3 uid="uid://etodwv0g65e"]
 
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="1_nk3rp"]
 [ext_resource type="Script" path="res://scenes/plant/satisfaction_particles.gd" id="1_t15gi"]
