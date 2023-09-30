@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=3 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
+[ext_resource type="Theme" uid="uid://bkxry10k3p8or" path="res://theme.tres" id="2_kffk4"]
 
 [node name="MainMenuScreen" type="CanvasLayer"]
 script = ExtResource("1_imu6r")
@@ -10,6 +11,7 @@ offset_right = 320.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_kffk4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(300, 0)

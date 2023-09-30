@@ -1,5 +1,7 @@
 extends Node2D
 
+const INFO_TEXT := "Needs an empty column and row"
+
 signal satisfaction_changed(satisfied: bool)
 
 var is_satisfied = null
@@ -23,3 +25,13 @@ func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bo
             return set_satisfied(false)
 
     return set_satisfied(true)
+
+
+func _on_area_2d_mouse_entered():
+    print("spring entered")
+    GameEvents.emit_plant_area_entered(INFO_TEXT)
+
+
+func _on_area_2d_mouse_exited():
+    print("sprig exited")
+    GameEvents.emit_plant_area_exited()

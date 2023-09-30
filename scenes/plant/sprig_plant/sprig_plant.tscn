@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://beaywhoxf8xw1"]
+[gd_scene load_steps=9 format=3 uid="uid://beaywhoxf8xw1"]
 
 [ext_resource type="Script" path="res://scenes/plant/sprig_plant/sprig_plant.gd" id="1_1ukpb"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_77w8u"]
@@ -88,6 +88,9 @@ _data = {
 atlas = ExtResource("2_77w8u")
 region = Rect2(69, 1, 16, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_el8s1"]
+radius = 8.0
+
 [node name="SprigPlant" type="Node2D"]
 script = ExtResource("1_1ukpb")
 
@@ -104,3 +107,11 @@ offset = Vector2(0, -6)
 
 [node name="SatisfactionParticles" parent="." node_paths=PackedStringArray("plant") instance=ExtResource("2_dmuvm")]
 plant = NodePath("..")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_el8s1")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://n0neq0p7yqtg"]
+[gd_scene load_steps=5 format=3 uid="uid://v0x1tjw0opc2"]
 
 [ext_resource type="Script" path="res://scenes/plant_pot/plant_pot.gd" id="1_4jexd"]
-[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_rbd0s"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_tqxmf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y620r"]
-atlas = ExtResource("2_rbd0s")
+atlas = ExtResource("2_tqxmf")
 region = Rect2(120, 1, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxv1f"]
-size = Vector2(16, 18)
+size = Vector2(16, 26)
 
 [node name="PlantPot" type="Node2D"]
 script = ExtResource("1_4jexd")
