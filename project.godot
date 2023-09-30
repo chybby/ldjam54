@@ -12,18 +12,29 @@ config_version=5
 
 config/name="Ldjam 54"
 config/tags=PackedStringArray("ldjam")
-run/main_scene="res://menus/main_menu/main_menu_screen.tscn"
+run/main_scene="res://main/main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/viewport_width=160
+window/size/viewport_height=90
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="viewport"
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+click={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(212, 0),"global_position":Vector2(216, 43),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [physics]
 
@@ -31,4 +42,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 environment/default_environment="res://resources/default_env.tres"

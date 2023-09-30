@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://v0x1tjw0opc2"]
+
+[ext_resource type="Script" path="res://scenes/plant_pot/plant_pot.gd" id="1_4jexd"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://spritesheet.png" id="1_wpmcc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y620r"]
+atlas = ExtResource("1_wpmcc")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxv1f"]
+size = Vector2(16, 26)
+
+[node name="PlantPot" type="Node2D"]
+script = ExtResource("1_4jexd")
+
+[node name="PlantPosition" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -6)
+
+[node name="PotSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
+texture = SubResource("AtlasTexture_y620r")
+
+[node name="Area2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_oxv1f")

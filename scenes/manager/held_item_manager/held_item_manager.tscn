@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ipjyx5wek6wr"]
+
+[ext_resource type="Script" path="res://scenes/manager/held_item_manager/held_item_manager.gd" id="1_pl5fh"]
+
+[node name="HeldItemManager" type="Node" groups=["held_item_manager"]]
+script = ExtResource("1_pl5fh")
