@@ -14,6 +14,14 @@ func emit_dirt() -> void:
     dirt_particles.restart()
 
 
+func plant(plant_position: Vector2i, tile_map: TerrariumTileMap) -> void:
+    pass
+
+
+func uproot(plant_position: Vector2i, tile_map: TerrariumTileMap) -> void:
+    pass
+
+
 func set_satisfied(satisfied: bool) -> bool:
     if is_satisfied != satisfied:
         satisfaction_changed.emit(satisfied)

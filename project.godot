@@ -22,6 +22,10 @@ GameEvents="*res://auto_load/game_events/game_events.tscn"
 ScreenTransition="*res://auto_load/screen_transition/screen_transition.tscn"
 Vignette="*res://auto_load/vignette/vignette.tscn"
 
+[debug]
+
+gdscript/warnings/unused_variable=0
+
 [display]
 
 window/size/viewport_width=240
