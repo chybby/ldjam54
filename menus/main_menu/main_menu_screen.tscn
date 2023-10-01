@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=6 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
 [ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_kffk4"]
 [ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="3_voasl"]
 [ext_resource type="PackedScene" uid="uid://bco0pq5m5c2yt" path="res://menus/level_select/level_select.tscn" id="4_f7j43"]
+[ext_resource type="AudioStream" uid="uid://bhkmtqx30y01g" path="res://menus/main_menu/menu_music.mp3" id="4_vbbsm"]
 
 [node name="MainMenuScreen" type="CanvasLayer"]
 script = ExtResource("1_imu6r")
@@ -43,3 +44,7 @@ text = "Level Select"
 [node name="LevelSelect" parent="." instance=ExtResource("4_f7j43")]
 unique_name_in_owner = true
 visible = false
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_vbbsm")

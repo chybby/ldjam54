@@ -9,7 +9,7 @@ extends CanvasLayer
 func _ready() -> void:
     play_button.pressed.connect(on_play_button_pressed)
     level_select_button.pressed.connect(on_level_select_button_pressed)
-    MusicManager.add_music("res://menus/main_menu/menu_music.mp3")
+    MusicManager.add_music(%Audio)
 
 
 func on_play_button_pressed() -> void:
