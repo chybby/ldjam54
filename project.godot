@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 GameEvents="*res://auto_load/game_events/game_events.tscn"
 ScreenTransition="*res://auto_load/screen_transition/screen_transition.tscn"
 Vignette="*res://auto_load/vignette/vignette.tscn"
+MusicManager="*res://auto_load/music_manager/music_manager.tscn"
 
 [debug]
 

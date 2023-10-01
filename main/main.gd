@@ -7,6 +7,7 @@ extends Node2D
 
 
 func _ready() -> void:
+    MusicManager.add_music("res://main/bg_music_extras.mp3")
     load_level(first_level_scene)
 
 
