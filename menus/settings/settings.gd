@@ -1,9 +1,28 @@
 extends CanvasLayer
 
+@onready var main_menu_button: MarginContainer = %MainMenuButton
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
+
+
+func _ready() -> void:
+    main_menu_button.pressed.connect(on_main_menu_button_pressed)
+
+
 func _input(event):
     if event.is_action_pressed("pause"):
-        get_tree().paused = not get_tree().paused
-        visible = not visible
+        enable_disable()
+
+
+func enable_disable() -> void:
+    if visible:
+        # Blur out.
+        animation_player.play_backwards("blur")
+        await animation_player.animation_finished
+    else:
+        # Blur in.
+        animation_player.play("blur")
+    get_tree().paused = not get_tree().paused
+    visible = not visible
 
 
 func _on_volume_value_changed(volume):
@@ -11,5 +30,8 @@ func _on_volume_value_changed(volume):
 
 
 func _on_exit_button_pressed():
-    get_tree().paused = false
-    visible = false
+    enable_disable()
+
+
+func on_main_menu_button_pressed() -> void:
+    ScreenTransition.transition_to_scene_file("res://menus/main_menu/main_menu_screen.tscn")

@@ -31,24 +31,28 @@ region_rect = Rect2(664, 1, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oncmx"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(851, 1, 16, 16)
+region = Rect2(855, 5, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k35pk"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(868, 1, 16, 16)
+region = Rect2(872, 5, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aitr7"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(885, 1, 16, 16)
+region = Rect2(889, 5, 8, 8)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5h5b"]
-bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+bg_color = Color(0.558594, 0.824219, 0.996094, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.597656, 0.597656, 0.597656, 1)
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwist"]
-content_margin_left = 1.0
-content_margin_top = 1.0
-content_margin_right = 1.0
-content_margin_bottom = 1.0
+content_margin_top = 3.0
+content_margin_bottom = 3.0
 anti_aliasing = false
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pd78b"]
@@ -91,6 +95,7 @@ Button/styles/pressed = SubResource("StyleBoxTexture_e1s8u")
 HSlider/icons/grabber = SubResource("AtlasTexture_oncmx")
 HSlider/icons/grabber_disabled = SubResource("AtlasTexture_k35pk")
 HSlider/icons/grabber_highlight = SubResource("AtlasTexture_aitr7")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_r5h5b")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_r5h5b")
 HSlider/styles/slider = SubResource("StyleBoxFlat_dwist")
 Label/colors/font_outline_color = Color(0.243137, 0.207843, 0.27451, 1)

@@ -24,5 +24,8 @@ func _ready() -> void:
 
 
 func on_exit_button_pressed() -> void:
-    visible = false
-    closed.emit()
+    ScreenTransition.transition_then(func():
+        visible = false
+        closed.emit()
+    )
+

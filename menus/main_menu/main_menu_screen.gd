@@ -17,9 +17,10 @@ func on_play_button_pressed() -> void:
 
 
 func on_level_select_button_pressed() -> void:
-    level_select.visible = true
-    game_start_ui.visible = false
-    await level_select.closed
-    level_select.visible = false
-    game_start_ui.visible = true
-
+    ScreenTransition.transition_then(func():
+        level_select.visible = true
+        game_start_ui.visible = false
+        await level_select.closed
+        level_select.visible = false
+        game_start_ui.visible = true
+    )
