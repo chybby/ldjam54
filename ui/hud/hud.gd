@@ -20,6 +20,10 @@ func show_next_level_button() -> void:
 
 
 func set_tooltip(text):
+    var held_item_manager = get_tree().get_first_node_in_group("held_item_manager")
+    if held_item_manager != null and not held_item_manager.is_empty():
+        return
+
     # Can't set text to other text until text is cleared so queue it up.
     if tooltip.text != "" and text != "":
         next_text = text

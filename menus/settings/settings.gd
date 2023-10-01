@@ -1,14 +1,21 @@
 extends CanvasLayer
 
+signal exited
+@export var enable_keyboard = true
+
 @onready var main_menu_button: MarginContainer = %MainMenuButton
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 
 func _ready() -> void:
     main_menu_button.pressed.connect(on_main_menu_button_pressed)
+    if not enable_keyboard:
+        main_menu_button.queue_free()
 
 
 func _input(event):
+    if not enable_keyboard:
+        return
     if event.is_action_pressed("pause"):
         enable_disable()
 
@@ -18,6 +25,7 @@ func enable_disable() -> void:
         # Blur out.
         animation_player.play_backwards("blur")
         await animation_player.animation_finished
+        exited.emit()
     else:
         # Blur in.
         animation_player.play("blur")

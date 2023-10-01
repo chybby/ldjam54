@@ -4,11 +4,13 @@ extends CanvasLayer
 @onready var level_select_button: MarginContainer = %LevelSelectButton
 @onready var level_select: CanvasLayer = %LevelSelect
 @onready var game_start_ui: MarginContainer = %GameStartUI
-
+@onready var settings_button: MarginContainer = %SettingsButton
+@onready var settings: CanvasLayer = %Settings
 
 func _ready() -> void:
     play_button.pressed.connect(on_play_button_pressed)
     level_select_button.pressed.connect(on_level_select_button_pressed)
+    settings_button.pressed.connect(on_settings_button_pressed)
     MusicManager.add_music(%Audio)
 
 
@@ -24,3 +26,7 @@ func on_level_select_button_pressed() -> void:
         level_select.visible = false
         game_start_ui.visible = true
     )
+
+
+func on_settings_button_pressed() -> void:
+    settings.enable_disable()
