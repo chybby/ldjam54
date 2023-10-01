@@ -11,22 +11,15 @@ func _ready():
 func _process(delta):
     pass
 
-func add_music(path: String) -> void:
-    # Load music from the given path
-    var file = FileAccess.open(path, FileAccess.READ)
-    var sound = AudioStreamMP3.new()
-    sound.data = file.get_buffer(file.get_length())
-    sound.loop = true
+func add_music(audio: AudioStreamPlayer) -> void:
+    audio = audio.duplicate()
+    add_child(audio)
     
-    var asp := AudioStreamPlayer.new()
-    add_child(asp)
-    asp.stream = sound
-    asp.play()
-    
+    audio.play()
     if not audio_stream_players.is_empty():
         var playback_pos: float = audio_stream_players[-1].get_playback_position()
-        asp.volume_db = -20
-        asp.seek(playback_pos)
+        audio.volume_db = -20
+        audio.seek(playback_pos)
         var tween = get_tree().create_tween()
-        tween.tween_property(asp, "volume_db", 0, 2)
-    audio_stream_players.append(asp)
+        tween.tween_property(audio, "volume_db", 0, 2)
+    audio_stream_players.append(audio)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=5 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
 [ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_kffk4"]
 [ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="3_voasl"]
+[ext_resource type="AudioStream" uid="uid://bhkmtqx30y01g" path="res://menus/main_menu/menu_music.mp3" id="4_vbbsm"]
 
 [node name="MainMenuScreen" type="CanvasLayer"]
 script = ExtResource("1_imu6r")
@@ -32,3 +33,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Play"
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_vbbsm")
