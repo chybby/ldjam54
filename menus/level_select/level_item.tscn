@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddmhl121fo0c"]
+
+[ext_resource type="Script" path="res://menus/level_select/level_item.gd" id="1_behsu"]
+[ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="1_i7rvh"]
+[ext_resource type="PackedScene" uid="uid://c5bffi57u6y1m" path="res://main/main.tscn" id="2_inpyj"]
+
+[node name="LevelItem" type="PanelContainer"]
+script = ExtResource("1_behsu")
+main_scene = ExtResource("2_inpyj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 4
+
+[node name="LevelName" type="Label" parent="HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 5
+text = "This is the name of the level"
+vertical_alignment = 2
+
+[node name="PlayButton" parent="HBoxContainer" instance=ExtResource("1_i7rvh")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play"

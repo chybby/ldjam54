@@ -6,7 +6,7 @@ signal end_game
 @export var tile_map: TerrariumTileMap
 @export var plant_pots: Array[PlantPot]
 @export var next_level_scene: PackedScene
-
+@export var level_name: String
 
 func _ready() -> void:
     tile_map.state_changed.connect(on_tile_map_state_changed)

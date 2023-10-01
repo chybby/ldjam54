@@ -18,6 +18,7 @@
 script = ExtResource("1_ucv61")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3"), NodePath("PlantPot4"), NodePath("PlantPot5"), NodePath("PlantPot6"), NodePath("PlantPot7"), NodePath("PlantPot8"), NodePath("PlantPot9"), NodePath("PlantPot10")]
+level_name = "The Chess Level"
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("2_ecb6r")]
 position = Vector2(61, -8)

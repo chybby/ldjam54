@@ -4,6 +4,7 @@ extends MarginContainer
 signal pressed
 
 @export_multiline var text: String = ""
+@export var icon: Texture = null
 
 @onready var button: Button = %Button
 @onready var label: Label = %Label
@@ -15,6 +16,7 @@ var initial_label_position: Vector2
 
 func _ready() -> void:
     button.pressed.connect(on_button_pressed)
+    button.icon = icon
     label.text = text
     # Sure.
     await get_tree().process_frame

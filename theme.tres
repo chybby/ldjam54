@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://uxch4vusgo5r"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://uxch4vusgo5r"]
 
 [ext_resource type="FontFile" uid="uid://c10lmhr0kmtj4" path="res://Minecraftia-Regular.ttf" id="1_6q0ew"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="1_wdg0o"]
@@ -59,6 +59,26 @@ texture_margin_right = 3.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(528, 1, 16, 16)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1d46"]
+content_margin_left = 1.0
+content_margin_top = 0.0
+content_margin_right = 1.0
+content_margin_bottom = 0.0
+bg_color = Color(0.996094, 0.996094, 0.996094, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.742188, 0.742188, 0.742188, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4yjj"]
+content_margin_left = 3.0
+content_margin_top = 0.0
+content_margin_right = 3.0
+content_margin_bottom = 0.0
+bg_color = Color(0.742188, 0.742188, 0.742188, 1)
+anti_aliasing = false
+
 [resource]
 default_font = ExtResource("1_6q0ew")
 default_font_size = 4
@@ -80,3 +100,8 @@ Label/constants/outline_size = 4
 Label/constants/shadow_outline_size = 0
 Label/font_sizes/font_size = 4
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_pd78b")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_h1d46")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_h1d46")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_h1d46")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_j4yjj")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_j4yjj")
