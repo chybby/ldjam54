@@ -10,7 +10,7 @@ shader_parameter/size = Vector2(32, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vmjc"]
 atlas = ExtResource("1_wrhw8")
-region = Rect2(664, 1, 16, 16)
+region = Rect2(732, 1, 16, 16)
 
 [node name="Settings" type="CanvasLayer"]
 process_mode = 3

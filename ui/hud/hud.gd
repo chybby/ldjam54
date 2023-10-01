@@ -4,7 +4,7 @@ signal next_level_button_pressed
 
 @onready var tooltip: Label = %Tooltip
 @onready var panel_container: PanelContainer = %PanelContainer
-@onready var next_level_button: Button = %NextLevelButton
+@onready var next_level_button: MarginContainer = %NextLevelButton
 
 
 var next_text = ""

@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-@onready var restart_button: Button = %RestartButton
-@onready var quit_button: Button = %QuitButton
+@onready var restart_button: MarginContainer = %RestartButton
+@onready var quit_button: MarginContainer = %QuitButton
 
 
 func _ready() -> void:

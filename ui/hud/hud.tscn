@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://qx85m3e0prw1"]
+[gd_scene load_steps=6 format=3 uid="uid://qx85m3e0prw1"]
 
 [ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_q4vcv"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_sbtr0"]
 [ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_xtqcv"]
+[ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="4_yheqq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjfmd"]
 atlas = ExtResource("2_sbtr0")
@@ -50,7 +51,7 @@ size_flags_vertical = 8
 theme = ExtResource("2_xtqcv")
 text = "This plant needs to be dead."
 
-[node name="NextLevelButton" type="Button" parent="MarginContainer"]
+[node name="NextLevelButton" parent="MarginContainer" instance=ExtResource("4_yheqq")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8

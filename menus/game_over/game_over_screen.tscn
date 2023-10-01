@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://btjo8cerngmhu"]
+[gd_scene load_steps=3 format=3 uid="uid://btjo8cerngmhu"]
 
 [ext_resource type="Script" path="res://menus/game_over/game_over_screen.gd" id="1_3lmng"]
+[ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="2_jatds"]
 
 [node name="GameOverScreen" type="CanvasLayer"]
 script = ExtResource("1_3lmng")
@@ -22,12 +23,14 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Game Over"
 
-[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="RestartButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_jatds")]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Restart"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="QuitButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_jatds")]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Quit"

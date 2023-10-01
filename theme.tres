@@ -1,19 +1,45 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://uxch4vusgo5r"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://uxch4vusgo5r"]
 
 [ext_resource type="FontFile" uid="uid://c10lmhr0kmtj4" path="res://Minecraftia-Regular.ttf" id="1_6q0ew"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="1_wdg0o"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_68kyt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lk7m7"]
+texture = ExtResource("1_wdg0o")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(647, 1, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ww5oy"]
+texture = ExtResource("1_wdg0o")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(613, 1, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1s8u"]
+texture = ExtResource("1_wdg0o")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(664, 1, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_oncmx"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(613, 1, 16, 16)
+region = Rect2(681, 1, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k35pk"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(630, 1, 16, 16)
+region = Rect2(698, 1, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aitr7"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(647, 1, 16, 16)
+region = Rect2(715, 1, 16, 16)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5h5b"]
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -36,6 +62,12 @@ region_rect = Rect2(528, 1, 16, 16)
 [resource]
 default_font = ExtResource("1_6q0ew")
 default_font_size = 4
+Button/colors/font_outline_color = Color(0.243137, 0.207843, 0.27451, 1)
+Button/constants/outline_size = 4
+Button/styles/focus = SubResource("StyleBoxEmpty_68kyt")
+Button/styles/hover = SubResource("StyleBoxTexture_lk7m7")
+Button/styles/normal = SubResource("StyleBoxTexture_ww5oy")
+Button/styles/pressed = SubResource("StyleBoxTexture_e1s8u")
 HSlider/icons/grabber = SubResource("AtlasTexture_oncmx")
 HSlider/icons/grabber_disabled = SubResource("AtlasTexture_k35pk")
 HSlider/icons/grabber_highlight = SubResource("AtlasTexture_aitr7")
