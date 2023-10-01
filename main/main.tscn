@@ -14,7 +14,6 @@ first_level_scene = ExtResource("1_csud4")
 unique_name_in_owner = true
 
 [node name="HeldItemManager" parent="." instance=ExtResource("1_dn0dj")]
-scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

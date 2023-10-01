@@ -23,11 +23,11 @@ ScreenTransition="*res://auto_load/screen_transition/screen_transition.tscn"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
+window/size/viewport_width=160
+window/size/viewport_height=90
 window/size/window_width_override=960
 window/size/window_height_override=540
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [gui]
 
@@ -51,4 +51,5 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+anti_aliasing/quality/msaa_2d=1
 environment/default_environment="res://resources/default_env.tres"

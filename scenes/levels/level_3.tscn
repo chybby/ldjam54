@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_qpyb8"]
 [ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="4_5xolx"]
 
-[node name="Level4" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
-scale = Vector2(2, 2)
+[node name="Level3" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
 script = ExtResource("1_psoxp")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3")]

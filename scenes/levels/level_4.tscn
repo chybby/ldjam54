@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cpavn2v4ue26g" path="res://scenes/plant/bamboo_plant/bamboo_plant.tscn" id="5_u6g02"]
 
 [node name="Level4" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
-scale = Vector2(2, 2)
 script = ExtResource("1_k2d2a")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3"), NodePath("PlantPot4")]
