@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://qx85m3e0prw1"]
+
+[ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_q4vcv"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_sbtr0"]
+[ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_xtqcv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjfmd"]
+atlas = ExtResource("2_sbtr0")
+region = Rect2(549, 5, 8, 8)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_q4vcv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_kjfmd")
+
+[node name="Tooltip" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+theme = ExtResource("2_xtqcv")
+text = "This plant needs to be dead."

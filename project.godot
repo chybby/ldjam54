@@ -24,8 +24,8 @@ Vignette="*res://auto_load/vignette/vignette.tscn"
 
 [display]
 
-window/size/viewport_width=160
-window/size/viewport_height=90
+window/size/viewport_width=240
+window/size/viewport_height=135
 window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"

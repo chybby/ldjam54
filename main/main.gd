@@ -3,7 +3,7 @@ extends Node2D
 @export var first_level_scene: PackedScene
 
 @onready var level: Node2D = %Level
-@onready var hud: Control = %HUD
+@onready var hud: CanvasLayer = %HUD
 
 
 func _ready() -> void:

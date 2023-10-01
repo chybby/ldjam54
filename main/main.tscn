@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs0khu62hwapc"]
+[gd_scene load_steps=5 format=3 uid="uid://bs0khu62hwapc"]
 
 [ext_resource type="PackedScene" uid="uid://d0txdy4ut16pl" path="res://scenes/levels/level_1.tscn" id="1_csud4"]
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
-[ext_resource type="Script" path="res://main/HUD.gd" id="3_a65wc"]
-[ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="5_b4jnn"]
+[ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_fnt08")
@@ -15,27 +14,5 @@ unique_name_in_owner = true
 
 [node name="HeldItemManager" parent="." instance=ExtResource("1_dn0dj")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HUD" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("tooltip")]
+[node name="HUD" parent="." instance=ExtResource("4_iouj8")]
 unique_name_in_owner = true
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("3_a65wc")
-tooltip = NodePath("Tooltip")
-
-[node name="Tooltip" type="Label" parent="CanvasLayer/HUD"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -12.0
-offset_right = 99.0
-offset_bottom = 5.0
-grow_vertical = 0
-theme = ExtResource("5_b4jnn")
