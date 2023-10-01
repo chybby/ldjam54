@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
-[ext_resource type="PackedScene" uid="uid://cyxmxjvgfwafn" path="res://scenes/levels/level_chess.tscn" id="2_yvgim"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level_chess.tscn" id="2_yvgim"]
 [ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="5_pbaip"]
 [ext_resource type="AudioStream" uid="uid://ckmf3x8yd47pn" path="res://main/bg_music_extras.mp3" id="6_1et4g"]
