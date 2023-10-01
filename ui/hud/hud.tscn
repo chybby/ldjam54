@@ -7,7 +7,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjfmd"]
 atlas = ExtResource("2_sbtr0")
-region = Rect2(549, 5, 8, 8)
+region = Rect2(549, 5, 9, 9)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_q4vcv")

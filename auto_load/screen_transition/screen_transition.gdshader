@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 uniform float transition_progress: hint_range(0.0, 1.0);
-uniform vec4 transition_color: source_color;
+uniform vec4 transition_color: source_color = vec4(0.043, 0.369, 0.396, 1.0);
 
 void fragment() {
 //    float checkerboard_zoom = 0.15;

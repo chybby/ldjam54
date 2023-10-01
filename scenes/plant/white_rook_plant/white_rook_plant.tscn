@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3hu15rlag6t7"]
+
+[ext_resource type="Script" path="res://scenes/plant/white_rook_plant/white_rook_plant.gd" id="1_v2v20"]
+[ext_resource type="PackedScene" uid="uid://syncrf2omc1y" path="res://scenes/plant/plant_animations.tscn" id="2_2sdr8"]
+[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="3_yrs67"]
+[ext_resource type="PackedScene" uid="uid://etodwv0g65e" path="res://scenes/plant/satisfaction_particles.tscn" id="4_0pboo"]
+[ext_resource type="PackedScene" uid="uid://bl3e111kk7mep" path="res://scenes/plant/dirt_particles.tscn" id="5_5tear"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
+atlas = ExtResource("3_yrs67")
+region = Rect2(800, 1, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_el8s1"]
+radius = 8.0
+
+[node name="WhiteRookPlant" type="Node2D"]
+script = ExtResource("1_v2v20")
+
+[node name="PlantAnimations" parent="." instance=ExtResource("2_2sdr8")]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
+texture = SubResource("AtlasTexture_520x6")
+offset = Vector2(0, -6)
+
+[node name="SatisfactionParticles" parent="." node_paths=PackedStringArray("plant") instance=ExtResource("4_0pboo")]
+plant = NodePath("..")
+
+[node name="DirtParticles" parent="." instance=ExtResource("5_5tear")]
+unique_name_in_owner = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_el8s1")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
