@@ -6,11 +6,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kb3yt"]
 shader = ExtResource("2_lm1wa")
-shader_parameter/size = Vector2(32, 28)
+shader_parameter/lod = 1.5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vmjc"]
 atlas = ExtResource("1_wrhw8")
-region = Rect2(732, 1, 16, 16)
+region = Rect2(902, 1, 16, 16)
 
 [node name="Settings" type="CanvasLayer"]
 process_mode = 3
