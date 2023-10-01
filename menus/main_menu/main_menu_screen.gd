@@ -1,11 +1,11 @@
 extends CanvasLayer
 
-@onready var start_button: Button = %StartButton
+@onready var play_button: MarginContainer = %PlayButton
 
 
 func _ready() -> void:
-    start_button.pressed.connect(on_start_button_pressed)
+    play_button.pressed.connect(on_play_button_pressed)
 
 
-func on_start_button_pressed() -> void:
+func on_play_button_pressed() -> void:
     ScreenTransition.transition_to_scene("res://main/main.tscn")

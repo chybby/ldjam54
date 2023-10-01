@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=4 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
 [ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_kffk4"]
+[ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="3_voasl"]
 
 [node name="MainMenuScreen" type="CanvasLayer"]
 script = ExtResource("1_imu6r")
@@ -25,7 +26,8 @@ text = "Game Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="PlayButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_voasl")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Start"
+size_flags_horizontal = 4
+text = "Play"
