@@ -22,7 +22,6 @@ func set_satisfied(satisfied: bool) -> bool:
 func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bool:
     # Bamboo is satisfied if next to water.
     for coord in tile_map.get_surrounding_coords(plant_position):
-        var xxx = tile_map.get_obstacle(coord)
         if tile_map.get_obstacle(coord) == tile_map.OBSTACLE_WATER:
             return set_satisfied(true)
 

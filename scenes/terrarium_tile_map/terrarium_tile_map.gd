@@ -6,16 +6,16 @@ signal state_changed
 const DEFAULT_SOURCE = 0
 const CURSOR_ATLAS = Vector2i(9, 0)
 
-const SOIL_LAYER = 0
+const SOIL_LAYER = 2
 const SOIL_SAND = 0
 const SOIL_NORMAL = 1
 const SOIL_WET = 2
 
-const OBSTACLE_LAYER = 1
+const OBSTACLE_LAYER = 3
 const OBSTACLE_ROCK = 0
 const OBSTACLE_WATER = 1
 
-const CURSOR_LAYER = 2
+const CURSOR_LAYER = 4
 
 # Nested Array of Node2D.
 var plants: Array
