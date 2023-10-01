@@ -17,6 +17,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
@@ -46,3 +49,10 @@ size_flags_horizontal = 6
 size_flags_vertical = 8
 theme = ExtResource("2_xtqcv")
 text = "This plant needs to be dead."
+
+[node name="NextLevelButton" type="Button" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Next Level"

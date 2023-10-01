@@ -1,6 +1,6 @@
 extends Node2D
 
-signal load_next_level(level_scene: PackedScene)
+signal level_complete(next_level_scene: PackedScene)
 signal end_game
 
 @export var tile_map: TerrariumTileMap
@@ -30,6 +30,6 @@ func is_level_complete() -> bool:
 func on_tile_map_state_changed() -> void:
     if is_level_complete():
         if next_level_scene != null:
-            load_next_level.emit(next_level_scene)
+            level_complete.emit(next_level_scene)
         else:
             end_game.emit()

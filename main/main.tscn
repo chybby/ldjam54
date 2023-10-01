@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs0khu62hwapc"]
+[gd_scene load_steps=5 format=3 uid="uid://c5bffi57u6y1m"]
 
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_5.tscn" id="2_jaw0v"]
+[ext_resource type="PackedScene" uid="uid://b15gu4x64isbr" path="res://scenes/levels/level_8.tscn" id="2_br2w4"]
 [ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_fnt08")
-first_level_scene = ExtResource("2_jaw0v")
+first_level_scene = ExtResource("2_br2w4")
 
 [node name="Level" type="Node2D" parent="."]
 unique_name_in_owner = true

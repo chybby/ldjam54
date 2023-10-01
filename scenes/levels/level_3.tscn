@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwlqb1t67iuyx"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_psoxp"]
-[ext_resource type="PackedScene" uid="uid://c1k67ltg0yn67" path="res://scenes/levels/level_4.tscn" id="2_x2bfp"]
+[ext_resource type="PackedScene" uid="uid://0hbanp787y8a" path="res://scenes/levels/level_4.tscn" id="2_x2bfp"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_x2qj2"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_qpyb8"]
 [ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="4_5xolx"]
