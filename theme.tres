@@ -31,15 +31,15 @@ region_rect = Rect2(664, 1, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oncmx"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(681, 1, 16, 16)
+region = Rect2(851, 1, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k35pk"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(698, 1, 16, 16)
+region = Rect2(868, 1, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aitr7"]
 atlas = ExtResource("1_wdg0o")
-region = Rect2(715, 1, 16, 16)
+region = Rect2(885, 1, 16, 16)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5h5b"]
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
