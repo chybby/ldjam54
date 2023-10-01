@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://xcqu28ctvhk2" path="res://resources/tile_set.tres" id="1_6wseo"]
 [ext_resource type="Script" path="res://scenes/terrarium_tile_map/terrarium_tile_map.gd" id="2_jg4fr"]
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap" type="TileMap" groups=["terrarium"]]
 tile_set = ExtResource("1_6wseo")
 format = 2
 layer_0/name = "Decoration Background"

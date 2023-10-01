@@ -193,6 +193,11 @@ func handle_hover(coords: Vector2i) -> void:
         set_cell(CURSOR_LAYER, coords, DEFAULT_SOURCE, CURSOR_ATLAS)
 
 
+func disable_input() -> void:
+    set_process_input(false)
+    clear_layer(CURSOR_LAYER)
+
+
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("click"):
         var coords = get_cell_coords(event.position)
