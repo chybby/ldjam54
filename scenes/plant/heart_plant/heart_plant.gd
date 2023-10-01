@@ -33,8 +33,7 @@ func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bo
     # Heart is satisfied if it's between exactly two other plants.
     var surrounding_plants_coords = []
     for coord in tile_map.get_surrounding_coords(plant_position):
-        var plant = tile_map.get_plant(coord)
-        if plant != null:
+        if tile_map.get_plant(coord) != null:
             surrounding_plants_coords.append(coord)
 
     if surrounding_plants_coords.size() != 2:

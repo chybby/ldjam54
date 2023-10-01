@@ -24,7 +24,7 @@ Vignette="*res://auto_load/vignette/vignette.tscn"
 
 [debug]
 
-gdscript/warnings/unused_variable=0
+gdscript/warnings/unused_parameter=0
 
 [display]
 
