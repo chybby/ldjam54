@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5bffi57u6y1m"]
+[gd_scene load_steps=6 format=3 uid="uid://c5bffi57u6y1m"]
 
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
 [ext_resource type="PackedScene" uid="uid://cyxmxjvgfwafn" path="res://scenes/levels/level_chess.tscn" id="2_yvgim"]
 [ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
+[ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="5_pbaip"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_fnt08")
@@ -16,3 +17,6 @@ unique_name_in_owner = true
 
 [node name="HUD" parent="." instance=ExtResource("4_iouj8")]
 unique_name_in_owner = true
+
+[node name="Settings" parent="." instance=ExtResource("5_pbaip")]
+visible = false

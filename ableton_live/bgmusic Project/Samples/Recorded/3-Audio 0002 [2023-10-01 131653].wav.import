@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bi173fa2c4fhv"
+path="res://.godot/imported/3-Audio 0002 [2023-10-01 131653].wav-1260d9cdade2f1b03ba27ede4102b4d4.sample"
+
+[deps]
+
+source_file="res://ableton_live/bgmusic Project/Samples/Recorded/3-Audio 0002 [2023-10-01 131653].wav"
+dest_files=["res://.godot/imported/3-Audio 0002 [2023-10-01 131653].wav-1260d9cdade2f1b03ba27ede4102b4d4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

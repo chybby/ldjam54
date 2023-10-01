@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://uxch4vusgo5r"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://uxch4vusgo5r"]
 
 [ext_resource type="FontFile" uid="uid://c10lmhr0kmtj4" path="res://Minecraftia-Regular.ttf" id="1_6q0ew"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="1_wdg0o"]
@@ -29,6 +29,28 @@ texture_margin_right = 3.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(664, 1, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_oncmx"]
+atlas = ExtResource("1_wdg0o")
+region = Rect2(681, 1, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k35pk"]
+atlas = ExtResource("1_wdg0o")
+region = Rect2(698, 1, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aitr7"]
+atlas = ExtResource("1_wdg0o")
+region = Rect2(715, 1, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5h5b"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwist"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+anti_aliasing = false
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pd78b"]
 texture = ExtResource("1_wdg0o")
 texture_margin_left = 3.0
@@ -46,6 +68,11 @@ Button/styles/focus = SubResource("StyleBoxEmpty_68kyt")
 Button/styles/hover = SubResource("StyleBoxTexture_lk7m7")
 Button/styles/normal = SubResource("StyleBoxTexture_ww5oy")
 Button/styles/pressed = SubResource("StyleBoxTexture_e1s8u")
+HSlider/icons/grabber = SubResource("AtlasTexture_oncmx")
+HSlider/icons/grabber_disabled = SubResource("AtlasTexture_k35pk")
+HSlider/icons/grabber_highlight = SubResource("AtlasTexture_aitr7")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_r5h5b")
+HSlider/styles/slider = SubResource("StyleBoxFlat_dwist")
 Label/colors/font_outline_color = Color(0.243137, 0.207843, 0.27451, 1)
 Label/colors/font_shadow_color = Color(0.243137, 0.207843, 0.27451, 1)
 Label/constants/line_spacing = 0

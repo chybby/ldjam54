@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/plant/sprig_plant/sprig_plant.gd" id="1_1ukpb"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_77w8u"]
 [ext_resource type="PackedScene" uid="uid://etodwv0g65e" path="res://scenes/plant/satisfaction_particles.tscn" id="2_dmuvm"]
-[ext_resource type="PackedScene" uid="uid://syncrf2omc1y" path="res://scenes/plant/plant_animations.tscn" id="2_yghux"]
+[ext_resource type="PackedScene" path="res://scenes/plant/plant_animations.tscn" id="2_yghux"]
 [ext_resource type="PackedScene" uid="uid://bl3e111kk7mep" path="res://scenes/plant/dirt_particles.tscn" id="4_jot2g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
