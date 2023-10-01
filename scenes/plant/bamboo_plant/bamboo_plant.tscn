@@ -1,89 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpavn2v4ue26g"]
+[gd_scene load_steps=8 format=3 uid="uid://cpavn2v4ue26g"]
 
 [ext_resource type="Script" path="res://scenes/plant/bamboo_plant/bamboo_plant.gd" id="1_x8xhi"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="2_71jhl"]
+[ext_resource type="PackedScene" uid="uid://syncrf2omc1y" path="res://scenes/plant/plant_animations.tscn" id="2_ijqqp"]
 [ext_resource type="PackedScene" uid="uid://etodwv0g65e" path="res://scenes/plant/satisfaction_particles.tscn" id="3_8ocu4"]
 [ext_resource type="PackedScene" uid="uid://bl3e111kk7mep" path="res://scenes/plant/dirt_particles.tscn" id="4_k45ok"]
-
-[sub_resource type="Animation" id="Animation_qutxt"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:skew")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:scale:x")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite:scale:y")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_vvoej"]
-resource_name = "sway"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:skew")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(2, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, 0, 0, 0.0666667, 0, -0.165806, -0.0666667, 0, 0.0666667, 0, 0.139626, -0.0666667, 0, 0.0666667, 0, -0.165806, -0.0666667, 0, 0.0666667, 0, 0, -0.0666667, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.6, 2)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:scale:x")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(2, 0, 0, 0, 0),
-"points": PackedFloat32Array(1, 0, 0, 0.0666667, 0, 0.92, -0.0666667, 0, 0.0333333, 0, 1.02, -0.0333333, 0, 0.0666667, 0, 1.125, -0.0666667, 0, 0.0333333, 0, 1, -0.0333333, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.3, 0.9, 1.4, 2)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite:scale:y")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(2, 0, 0, 0, 0),
-"points": PackedFloat32Array(1, 0, 0, 0.0666667, 0, 1.06, -0.0666667, 0, 0.0333333, 0, 1.165, -0.0333333, 0, 0.0666667, 0, 0.855, -0.0666667, 0, 0.0333333, 0, 1, -0.0333333, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.3, 0.9, 1.4, 2)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rt26r"]
-_data = {
-"RESET": SubResource("Animation_qutxt"),
-"sway": SubResource("Animation_vvoej")
-}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_520x6"]
 atlas = ExtResource("2_71jhl")
@@ -95,11 +16,7 @@ radius = 8.0
 [node name="BambooPlant" type="Node2D"]
 script = ExtResource("1_x8xhi")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "sway"
-libraries = {
-"": SubResource("AnimationLibrary_rt26r")
-}
+[node name="PlantAnimations" parent="." instance=ExtResource("2_ijqqp")]
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, 7)
