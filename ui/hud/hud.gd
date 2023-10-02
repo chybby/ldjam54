@@ -8,6 +8,8 @@ signal next_level_button_pressed
 @onready var level_name: Label = %LevelName
 @onready var level_name_container: PanelContainer = %LevelNameContainer
 
+var level_complete = false
+
 var target_tooltip_text := ""
 var next_text := ""
 
@@ -30,7 +32,17 @@ func _ready():
     tween.tween_property(next_level_button, "position", next_level_button_original_position + Vector2.DOWN * 30, 0.0)
 
 
+func _process(delta: float) -> void:
+    if Input.get_current_cursor_shape() in [Input.CURSOR_ARROW, Input.CURSOR_POINTING_HAND] and not level_complete:
+        if target_tooltip_text == "":
+            CursorManager.set_cursor(CursorManager.POINTING)
+        else:
+            CursorManager.set_cursor(CursorManager.CAN_GRAB)
+
+
 func show_next_level_button() -> void:
+    level_complete = true
+    CursorManager.set_cursor(CursorManager.POINTING)
     var tween = create_tween()
     tween.tween_property(next_level_button, "position", next_level_button_original_position, 0.5)\
         .set_ease(Tween.EASE_OUT)\
@@ -83,6 +95,7 @@ func set_tooltip(text: String):
 
 
 func reset():
+    level_complete = false
     tooltip.text = ""
     next_text = ""
     if next_level_button_original_position != null:

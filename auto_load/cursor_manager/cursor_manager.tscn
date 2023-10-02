@@ -1,0 +1,44 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyqvnxmrgafjx"]
+
+[ext_resource type="Script" path="res://auto_load/cursor_manager/cursor_manager.gd" id="1_v4ujc"]
+[ext_resource type="Texture2D" uid="uid://beabjvowm2dr7" path="res://assets/cursors.png" id="2_r108x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf7nt"]
+atlas = ExtResource("2_r108x")
+region = Rect2(64, 16, 14, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2jbx"]
+atlas = ExtResource("2_r108x")
+region = Rect2(208, 0, 28, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itxvf"]
+atlas = ExtResource("2_r108x")
+region = Rect2(0, 128, 56, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36ct1"]
+atlas = ExtResource("2_r108x")
+region = Rect2(0, 16, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy2hi"]
+atlas = ExtResource("2_r108x")
+region = Rect2(80, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efdq8"]
+atlas = ExtResource("2_r108x")
+region = Rect2(0, 48, 67, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psgwe"]
+atlas = ExtResource("2_r108x")
+region = Rect2(32, 16, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqs0t"]
+atlas = ExtResource("2_r108x")
+region = Rect2(144, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iykks"]
+atlas = ExtResource("2_r108x")
+region = Rect2(119, 48, 67, 72)
+
+[node name="CursorManager" type="Node"]
+script = ExtResource("1_v4ujc")
+cursor_textures = Array[Texture]([SubResource("AtlasTexture_bf7nt"), SubResource("AtlasTexture_h2jbx"), SubResource("AtlasTexture_itxvf"), SubResource("AtlasTexture_36ct1"), SubResource("AtlasTexture_iy2hi"), SubResource("AtlasTexture_efdq8"), SubResource("AtlasTexture_psgwe"), SubResource("AtlasTexture_qqs0t"), SubResource("AtlasTexture_iykks")])

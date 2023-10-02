@@ -16,6 +16,7 @@ func is_empty() -> bool:
 
 
 func hold_item(item: Node2D) -> void:
+    CursorManager.set_cursor(CursorManager.GRABBING)
     held_item = item
     item.get_parent().remove_child(item)
     add_child(item)
@@ -25,6 +26,7 @@ func hold_item(item: Node2D) -> void:
 
 
 func release_item() -> Node2D:
+    CursorManager.set_cursor(CursorManager.POINTING)
     remove_child(held_item)
     var item = held_item
     held_item = null
