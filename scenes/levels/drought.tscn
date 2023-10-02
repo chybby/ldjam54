@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bta7renwlwh34"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_46xie"]
-[ext_resource type="PackedScene" uid="uid://bmdi2slmb7wut" path="res://scenes/levels/cupids_arrow.tscn" id="2_dskbp"]
+[ext_resource type="PackedScene" uid="uid://dkf17eowdggf2" path="res://scenes/levels/why_was_the_garden_centre_selling_these.tscn" id="2_iau8d"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="3_umtge"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="4_jnk47"]
 [ext_resource type="PackedScene" uid="uid://d3nwguycs25fy" path="res://scenes/plant/cactus_plant/cactus_plant.tscn" id="5_r5k4o"]
@@ -11,7 +11,7 @@
 script = ExtResource("1_46xie")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3"), NodePath("PlantPot4"), NodePath("PlantPot5")]
-next_level_scene = ExtResource("2_dskbp")
+next_level_scene = ExtResource("2_iau8d")
 level_name = "Drought"
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("3_umtge")]
