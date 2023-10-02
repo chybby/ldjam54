@@ -6,8 +6,11 @@ extends CanvasLayer
 @onready var game_start_ui: MarginContainer = %GameStartUI
 @onready var settings_button: MarginContainer = %SettingsButton
 @onready var settings: CanvasLayer = %Settings
+@onready var terrarium_tile_map: TileMap = %TerrariumTileMap
+
 
 func _ready() -> void:
+    terrarium_tile_map.set_process_input(false)
     play_button.pressed.connect(on_play_button_pressed)
     level_select_button.pressed.connect(on_level_select_button_pressed)
     settings_button.pressed.connect(on_settings_button_pressed)

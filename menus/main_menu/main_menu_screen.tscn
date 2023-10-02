@@ -1,14 +1,42 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=13 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
+[ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_et6ra"]
 [ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_kffk4"]
 [ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="3_voasl"]
+[ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_yglf5"]
+[ext_resource type="PackedScene" uid="uid://d3nwguycs25fy" path="res://scenes/plant/cactus_plant/cactus_plant.tscn" id="4_0r61a"]
 [ext_resource type="PackedScene" uid="uid://bco0pq5m5c2yt" path="res://menus/level_select/level_select.tscn" id="4_f7j43"]
 [ext_resource type="AudioStream" uid="uid://bhkmtqx30y01g" path="res://menus/main_menu/menu_music.mp3" id="4_vbbsm"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="4_weer2"]
+[ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="5_5u8yb"]
+[ext_resource type="PackedScene" uid="uid://b0qtt0iigf075" path="res://scenes/plant/cactus2_plant/cactus2_plant.tscn" id="5_l0tyk"]
+[ext_resource type="PackedScene" uid="uid://ci4uwve81ubdv" path="res://scenes/plant/actual_fern_plant/actual_fern_plant.tscn" id="6_jva7l"]
 
 [node name="MainMenuScreen" type="CanvasLayer"]
 script = ExtResource("1_imu6r")
+
+[node name="TerrariumTileMap" parent="." instance=ExtResource("2_et6ra")]
+unique_name_in_owner = true
+position = Vector2(0, -16)
+layer_0/tile_data = PackedInt32Array(262144, 1900544, 0, 262145, 1900544, 0, 262146, 1900544, 0, 262147, 1900544, 0, 262148, 1900544, 0, 262149, 1900544, 0, 262150, 1900544, 0, 262151, 1900544, 0, 262152, 1900544, 0, 262153, 1900544, 0, 262154, 1900544, 0, 262155, 1900544, 0, 262156, 1900544, 0, 262157, 1900544, 0, 262158, 1900544, 0, 262159, 1900544, 0, 327695, 1900544, 0, 393231, 1900544, 0, 458767, 1900544, 0, 524303, 1900544, 0, 589839, 1900544, 0, 589838, 1900544, 0, 589837, 1900544, 0, 589836, 1900544, 0, 589835, 1900544, 0, 589834, 1900544, 0, 589833, 1900544, 0, 589832, 1900544, 0, 589831, 1900544, 0, 589830, 1900544, 0, 589829, 1900544, 0, 589828, 1900544, 0, 589827, 1900544, 0, 589826, 1900544, 0, 589825, 1900544, 0, 589824, 1900544, 0, 655359, 1900544, 0, 589823, 1900544, 0, 524287, 1900544, 0, 458751, 1900544, 0, 393215, 1900544, 0, 327679, 1900544, 0, 327680, 1900544, 0, 327681, 1900544, 0, 327682, 1900544, 0, 327683, 1900544, 0, 327684, 1900544, 0, 327685, 1900544, 0, 327686, 1900544, 0, 327687, 1900544, 0, 327688, 1900544, 0, 327689, 1900544, 0, 327690, 1900544, 0, 327691, 1900544, 0, 327692, 1900544, 0, 327693, 1900544, 0, 327694, 1900544, 0, 393230, 1900544, 0, 393229, 1900544, 0, 393228, 1900544, 0, 393227, 1900544, 0, 393226, 1900544, 0, 393225, 1900544, 0, 393224, 1900544, 0, 393223, 1900544, 0, 393222, 1900544, 0, 393221, 1900544, 0, 393220, 1900544, 0, 393219, 1900544, 0, 393216, 1900544, 0, 393217, 1900544, 0, 393218, 1900544, 0, 458753, 1900544, 0, 458752, 1900544, 0, 458754, 1900544, 0, 458755, 1900544, 0, 458756, 1900544, 0, 458757, 1900544, 0, 458758, 1900544, 0, 458759, 1900544, 0, 458760, 1900544, 0, 458761, 1900544, 0, 458762, 1900544, 0, 458763, 1900544, 0, 458764, 1900544, 0, 458765, 1900544, 0, 458766, 1900544, 0, 524302, 1900544, 0, 524301, 1900544, 0, 524300, 1900544, 0, 524299, 1900544, 0, 524298, 1900544, 0, 524297, 1900544, 0, 524296, 1900544, 0, 524295, 1900544, 0, 524288, 1900544, 0, 524289, 1900544, 0, 524290, 1900544, 0, 524291, 1900544, 0, 524292, 1900544, 0, 524293, 1900544, 0, 524294, 1900544, 0, 262143, 1966080, 0, 196608, 1966080, 0, 196609, 1966080, 0, 196610, 1966080, 0, 196611, 1966080, 0, 196612, 1966080, 0, 196613, 1966080, 0, 196614, 1966080, 0, 196615, 1966080, 0, 196616, 1966080, 0, 196617, 1966080, 0, 196618, 1966080, 0, 196619, 1966080, 0, 196620, 1966080, 0, 196621, 1966080, 0, 196622, 1966080, 0, 196623, 1966080, 0, 131087, 1966080, 0, 65551, 1966080, 0, 15, 1966080, 0, -65521, 1966080, 0, -65522, 1966080, 0, -65523, 1966080, 0, -65524, 1966080, 0, -65525, 1966080, 0, -65526, 1966080, 0, -65527, 1966080, 0, -65528, 1966080, 0, -65529, 1966080, 0, -65530, 1966080, 0, -65531, 1966080, 0, -65532, 1966080, 0, -65533, 1966080, 0, -65534, 1966080, 0, -65535, 1966080, 0, -65536, 1966080, 0, -1, 1966080, 0, 65535, 1966080, 0, 131071, 1966080, 0, 196607, 1966080, 0, 131072, 1966080, 0, 131073, 1966080, 0, 131074, 1966080, 0, 131075, 1966080, 0, 131076, 1966080, 0, 131077, 1966080, 0, 131078, 1966080, 0, 131079, 1966080, 0, 131080, 1966080, 0, 131081, 1966080, 0, 131082, 1966080, 0, 131083, 1966080, 0, 131084, 1966080, 0, 131085, 1966080, 0, 131086, 1966080, 0, 65550, 1966080, 0, 65549, 1966080, 0, 65548, 1966080, 0, 65547, 1966080, 0, 65546, 1966080, 0, 65545, 1966080, 0, 65544, 1966080, 0, 65543, 1966080, 0, 65542, 1966080, 0, 65541, 1966080, 0, 65540, 1966080, 0, 65539, 1966080, 0, 65538, 1966080, 0, 65537, 1966080, 0, 65536, 1966080, 0, 0, 1966080, 0, 1, 1966080, 0, 2, 1966080, 0, 3, 1966080, 0, 4, 1966080, 0, 5, 1966080, 0, 6, 1966080, 0, 7, 1966080, 0, 8, 1966080, 0, 9, 1966080, 0, 10, 1966080, 0, 11, 1966080, 0, 12, 1966080, 0, 13, 1966080, 0, 14, 1966080, 0)
+layer_1/tile_data = PackedInt32Array(327690, 1376256, 0, 393226, 1507328, 0, 458762, 1507328, 0, 524298, 1572864, 0, 524299, 1638400, 0, 524300, 1703936, 0, 524301, 1769472, 0, 524302, 1835008, 0, 458766, 1441792, 0, 393230, 1441792, 0, 327694, 1441792, 0, 262158, 1245184, 0, 262157, 1179648, 0, 262156, 1179648, 0, 262155, 1114112, 0, 262154, 1048576, 0, 393216, 1572864, 0, 393217, 1638400, 0, 393218, 1769472, 0, 393219, 1835008, 0, 327683, 1441792, 0, 262147, 1441792, 0, 196611, 1245184, 0, 196610, 1179648, 0, 196609, 1114112, 0, 196608, 1048576, 0, 262144, 1376256, 0, 327680, 1507328, 0)
+layer_2/tile_data = PackedInt32Array(327693, 786432, 0, 327692, 0, 0, 393228, 0, 0, 393229, 0, 0, 327691, 65536, 0, 393227, 65536, 0, 458763, 65536, 0, 458764, 65536, 0, 458765, 65536, 0, 262146, 131072, 0, 327682, 131072, 0, 327681, 131072, 0, 262145, 131072, 0)
+layer_3/tile_data = PackedInt32Array(262146, 196608, 0)
+
+[node name="PlantPot" parent="TerrariumTileMap" instance=ExtResource("3_yglf5")]
+position = Vector2(160, 136)
+initial_plant_scene = ExtResource("4_0r61a")
+
+[node name="PlantPot2" parent="TerrariumTileMap" instance=ExtResource("3_yglf5")]
+position = Vector2(67, 112)
+initial_plant_scene = ExtResource("5_5u8yb")
+
+[node name="Cactus2Plant" parent="TerrariumTileMap" instance=ExtResource("5_l0tyk")]
+position = Vector2(200, 104)
+
+[node name="ActualFernPlant" parent="TerrariumTileMap" instance=ExtResource("6_jva7l")]
+position = Vector2(25, 88)
 
 [node name="GameStartUI" type="MarginContainer" parent="."]
 unique_name_in_owner = true
@@ -18,17 +46,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kffk4")
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameStartUI"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Label" type="Label" parent="GameStartUI/VBoxContainer"]
-layout_mode = 2
-text = "Game Name"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_vertical = 8
 
 [node name="PlayButton" parent="GameStartUI/VBoxContainer" instance=ExtResource("3_voasl")]
 unique_name_in_owner = true
@@ -48,6 +72,15 @@ layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "Settings"
+
+[node name="Label" type="Label" parent="GameStartUI"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Game Name"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LevelSelect" parent="." instance=ExtResource("4_f7j43")]
 unique_name_in_owner = true

@@ -31,11 +31,7 @@ func on_end_game() -> void:
     disable_terrarium_input()
     hud.show_next_level_button()
     await hud.next_level_button_pressed
-    ScreenTransition.transition_then(func():
-        # Main scene gets comfortable and doesn't want to go away?????
-        get_tree().get_first_node_in_group("main").queue_free()
-        get_tree().change_scene_to_file("res://menus/game_over/game_over_screen.tscn")
-    )
+    ScreenTransition.transition_to_scene_file("res://menus/game_over/game_over_screen.tscn")
 
 
 func on_level_complete(next_level_scene: PackedScene) -> void:
