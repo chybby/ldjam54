@@ -1,6 +1,6 @@
 extends Node2D
 
-const INFO_TEXT := "Turns surrounding soil into sand"
+const INFO_TEXT := "Only grows on wet soil"
 
 signal satisfaction_changed(satisfied: bool)
 
@@ -15,12 +15,7 @@ func emit_dirt() -> void:
 
 
 func plant(plant_position: Vector2i, tile_map: TerrariumTileMap) -> void:
-    # Cactus turns surrounding soil to sand.
-    var coords = tile_map.get_surrounding_coords(plant_position, true)
-    for coord in coords:
-        var soil_id = tile_map.get_soil(coord)
-        if soil_id != null:
-            tile_map.add_modification(self, coord, tile_map.SOIL_SAND)
+    pass
 
 
 func uproot(plant_position: Vector2i, tile_map: TerrariumTileMap) -> void:
@@ -35,8 +30,8 @@ func set_satisfied(satisfied: bool) -> bool:
 
 
 func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bool:
-    # Cactus is satisfied always.
-    return set_satisfied(true)
+    # Red mushroom is satisfied if on wet soil.
+    return set_satisfied(tile_map.get_soil(plant_position) == tile_map.SOIL_WET)
 
 
 func _on_area_2d_mouse_entered():

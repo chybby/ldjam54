@@ -5,6 +5,8 @@ extends Node2D
 @onready var level: Node2D = %Level
 @onready var hud: CanvasLayer = %HUD
 
+var level_number := 1
+
 
 func _ready() -> void:
     MusicManager.add_music(%Audio)
@@ -19,6 +21,8 @@ func load_level(level_scene: PackedScene):
     level.add_child(level_instance)
     level_instance.level_complete.connect(on_level_complete)
     level_instance.end_game.connect(on_end_game)
+    hud.set_level_name(level_instance.level_name, level_number)
+    level_number += 1
 
 
 func disable_terrarium_input() -> void:

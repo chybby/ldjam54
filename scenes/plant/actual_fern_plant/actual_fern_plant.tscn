@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ci4uwve81ubdv"]
 
-[ext_resource type="Script" path="res://scenes/plant/fern_plant/fern_plant.gd" id="1_6ppn3"]
+[ext_resource type="Script" path="res://scenes/plant/actual_fern_plant/actual_fern_plant.gd" id="1_vnl6u"]
 [ext_resource type="PackedScene" uid="uid://syncrf2omc1y" path="res://scenes/plant/plant_animations.tscn" id="2_oibof"]
 [ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="3_8jdt3"]
 [ext_resource type="PackedScene" uid="uid://etodwv0g65e" path="res://scenes/plant/satisfaction_particles.tscn" id="4_g8x7g"]
@@ -14,7 +14,7 @@ region = Rect2(103, 1, 16, 16)
 radius = 8.0
 
 [node name="ActualFernPlant" type="Node2D"]
-script = ExtResource("1_6ppn3")
+script = ExtResource("1_vnl6u")
 
 [node name="PlantAnimations" parent="." instance=ExtResource("2_oibof")]
 

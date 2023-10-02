@@ -14,13 +14,15 @@ func _ready() -> void:
     exit_button.pressed.connect(on_exit_button_pressed)
 
     var level_scene = first_level_scene
+    var level_number = 1
     while level_scene != null:
         var level_item_instance = level_item_scene.instantiate()
         levels.add_child(level_item_instance)
 
         var level_instance = level_scene.instantiate()
-        level_item_instance.set_level(level_scene, level_instance.level_name)
+        level_item_instance.set_level(level_scene, level_instance.level_name, level_number)
         level_scene = level_instance.next_level_scene
+        level_number += 1
 
 
 func on_exit_button_pressed() -> void:

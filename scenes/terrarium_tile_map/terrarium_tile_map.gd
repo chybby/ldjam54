@@ -22,8 +22,14 @@ const CURSOR_ATLAS = Vector2i(9, 0)
 
 # Nested Array of Node2D.
 var plants: Array
+var plant_order: Array[Node2D]
 
 var size: Vector2i
+
+# Nested Array of Node2D.
+var original_soils: Array
+# Dict from Node2D to nested Array of Node2D.
+var modifications = {}
 
 
 func _ready() -> void:
@@ -32,12 +38,21 @@ func _ready() -> void:
     size = calculate_size()
     print("Calculated size: %s" % size)
 
+    # Set up plants.
     plants = []
     for x in size.x:
         var column = []
         for y in size.y:
             column.append(null)
         plants.append(column)
+
+    # Set up original soils.
+    original_soils = []
+    for x in size.x:
+        var column = []
+        for y in size.y:
+            column.append(get_soil(Vector2i(x, y)))
+        original_soils.append(column)
 
 
 func calculate_size() -> Vector2i:
@@ -77,8 +92,18 @@ func get_soil(coords: Vector2i):
     return tile_data.get_custom_data("soil_id")
 
 
-func set_soil(coords: Vector2i, soil_id: int):
-    set_cell(SOIL_LAYER, coords, DEFAULT_SOURCE, soil_id_to_atlas(soil_id))
+func add_modification(plant: Node2D, coords: Vector2i, soil_id: int):
+    if not modifications.has(plant):
+        var plant_mods = []
+        for x in size.x:
+            var column = []
+            for y in size.y:
+                column.append(null)
+            plant_mods.append(column)
+
+        modifications[plant] = plant_mods
+
+    modifications[plant][coords.x][coords.y] = soil_id
 
 
 func get_obstacle(coords: Vector2i):
@@ -100,6 +125,22 @@ func are_all_plants_satisfied() -> bool:
 
 
 func update_plants() -> void:
+    # Reset soils.
+    for x in original_soils.size():
+        for y in original_soils[x].size():
+            if original_soils[x][y] != null:
+                set_cell(SOIL_LAYER, Vector2i(x, y), DEFAULT_SOURCE, soil_id_to_atlas(original_soils[x][y]))
+
+    # Apply modifications in order.
+    for plant in plant_order:
+        if modifications.has(plant):
+            var plant_mods = modifications[plant]
+            for x in plant_mods.size():
+                for y in plant_mods[x].size():
+                    if plant_mods[x][y] != null:
+                        set_cell(SOIL_LAYER, Vector2i(x, y), DEFAULT_SOURCE, soil_id_to_atlas(plant_mods[x][y]))
+
+    # Check if plants satisfied.
     for x in plants.size():
         for y in plants[x].size():
             var plant = plants[x][y]
@@ -142,6 +183,7 @@ func get_surrounding_coords(coord: Vector2i, include_center: bool = false) -> Ar
 
 func place_plant(plant: Node2D, coords: Vector2i) -> void:
     plants[coords.x][coords.y] = plant
+    plant_order.append(plant)
     add_child(plant)
     plant.global_position = to_global(map_to_local(coords))
     plant.plant(coords, self)
@@ -151,9 +193,11 @@ func place_plant(plant: Node2D, coords: Vector2i) -> void:
 func uproot_plant(coords: Vector2i) -> Node2D:
     var plant = plants[coords.x][coords.y] as Node2D
     plants[coords.x][coords.y] = null
+    plant_order.erase(plant)
     # Don't emit the particles.
     plant.is_satisfied = null
     plant.uproot(coords, self)
+    modifications.erase(plant)
     update_plants()
     return plant
 

@@ -23,27 +23,52 @@ theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+[node name="MenuNameContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MenuNameContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MenuNameContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="LevelName" type="Label" parent="MarginContainer/MenuNameContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+theme = ExtResource("2_xtqcv")
+text = "Level 1: The Level Name"
+
+[node name="TooltipContainer" type="PanelContainer" parent="MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TooltipContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 1
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TooltipContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="MarginContainer/TooltipContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 texture = SubResource("AtlasTexture_kjfmd")
 
-[node name="Tooltip" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Tooltip" type="Label" parent="MarginContainer/TooltipContainer/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6

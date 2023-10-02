@@ -1,6 +1,6 @@
 extends Node2D
 
-const INFO_TEXT := "Can't be next to a rock"
+const INFO_TEXT := "Must be in a row filled with plants"
 
 signal satisfaction_changed(satisfied: bool)
 
@@ -30,9 +30,9 @@ func set_satisfied(satisfied: bool) -> bool:
 
 
 func check_satisfied(plant_position: Vector2i, tile_map: TerrariumTileMap) -> bool:
-    # Fern is satisfied if not next to a rock.
-    for coord in tile_map.get_surrounding_coords(plant_position):
-        if tile_map.get_obstacle(coord) == tile_map.OBSTACLE_ROCK:
+    # Actual fern must be in a row filled with plants.
+    for coord in tile_map.get_row_coords(plant_position):
+        if tile_map.get_soil(coord) != null and tile_map.get_plant(coord) == null:
             return set_satisfied(false)
 
     return set_satisfied(true)
