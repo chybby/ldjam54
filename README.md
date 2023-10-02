@@ -12,6 +12,7 @@ How to play:
 - `Left Click` a space in the terrarium to place the plant.
 - Place all the plants in the terrarium to complete the level, though you need
   to make sure all the plants are happy with how they're placed.
+- `Esc` or `P` to open the settings menu while playing.
 
 Made for [Ludum Dare 54](https://ldjam.com/events/ludum-dare/54/picky-plants) by Jelly and Dome.
 
