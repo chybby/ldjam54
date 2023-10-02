@@ -11,7 +11,6 @@ func _ready() -> void:
 
 
 func on_plant_satisfaction_changed(satisfied: bool) -> void:
-    print("emitting")
     if satisfied:
         happy_particles.emitting = true
         happy_particles.restart()
