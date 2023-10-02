@@ -13,6 +13,7 @@ script = ExtResource("1_k2d2a")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3"), NodePath("PlantPot4")]
 next_level_scene = ExtResource("2_4eqw4")
+level_name = "Level 4"
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("2_c56ky")]
 position = Vector2(57, 6)

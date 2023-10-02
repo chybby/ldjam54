@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
-[ext_resource type="PackedScene" uid="uid://0hbanp787y8a" path="res://scenes/levels/level_4.tscn" id="2_0e3en"]
+[ext_resource type="PackedScene" uid="uid://d0txdy4ut16pl" path="res://scenes/levels/level_1.tscn" id="2_stmhf"]
 [ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="5_pbaip"]
 [ext_resource type="AudioStream" uid="uid://ckmf3x8yd47pn" path="res://main/bg_music_extras.mp3" id="6_1et4g"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" groups=["main"]]
 script = ExtResource("1_fnt08")
-first_level_scene = ExtResource("2_0e3en")
+first_level_scene = ExtResource("2_stmhf")
 
 [node name="Level" type="Node2D" parent="."]
 unique_name_in_owner = true

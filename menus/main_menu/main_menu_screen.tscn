@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=7 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
 [ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_kffk4"]
 [ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="3_voasl"]
+[ext_resource type="PackedScene" uid="uid://bco0pq5m5c2yt" path="res://menus/level_select/level_select.tscn" id="4_f7j43"]
 [ext_resource type="AudioStream" uid="uid://bhkmtqx30y01g" path="res://menus/main_menu/menu_music.mp3" id="4_vbbsm"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="4_weer2"]
 
@@ -32,18 +33,30 @@ vertical_alignment = 1
 [node name="PlayButton" parent="GameStartUI/VBoxContainer" instance=ExtResource("3_voasl")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 1
 text = "Play"
+
+[node name="LevelSelectButton" parent="GameStartUI/VBoxContainer" instance=ExtResource("3_voasl")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 1
+text = "Level Select"
 
 [node name="SettingsButton" parent="GameStartUI/VBoxContainer" instance=ExtResource("3_voasl")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "Settings"
 
+[node name="LevelSelect" parent="." instance=ExtResource("4_f7j43")]
+unique_name_in_owner = true
+layer = 2
+visible = false
+
 [node name="Settings" parent="." instance=ExtResource("4_weer2")]
 unique_name_in_owner = true
+layer = 3
 visible = false
 enable_keyboard = false
 

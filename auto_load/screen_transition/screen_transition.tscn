@@ -58,6 +58,7 @@ shader_parameter/transition_progress = 0.0
 shader_parameter/transition_color = Color(0.0431373, 0.368627, 0.396078, 1)
 
 [node name="ScreenTransition" type="CanvasLayer"]
+process_mode = 3
 layer = 10
 script = ExtResource("1_xkv3j")
 
