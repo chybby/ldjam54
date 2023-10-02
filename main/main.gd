@@ -19,6 +19,7 @@ func _ready() -> void:
 
 func load_level(level_scene: PackedScene):
     hud.reset()
+    confetti.visible = false
     for child in level.get_children():
         child.queue_free()
     var level_instance = level_scene.instantiate()
@@ -38,6 +39,7 @@ func disable_terrarium_input() -> void:
 func on_end_game() -> void:
     disable_terrarium_input()
     _play_success_sound()
+    confetti.visible = true
     confetti.restart()
     hud.show_next_level_button()
     await hud.next_level_button_pressed
@@ -47,6 +49,7 @@ func on_end_game() -> void:
 func on_level_complete(next_level_scene: PackedScene) -> void:
     disable_terrarium_input()
     _play_success_sound()
+    confetti.visible = true
     confetti.restart()
     hud.show_next_level_button()
     await hud.next_level_button_pressed
