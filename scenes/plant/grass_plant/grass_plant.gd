@@ -1,6 +1,6 @@
 extends Node2D
 
-const INFO_TEXT := "Only grows on soil"
+const INFO_TEXT := "Only grows on regular soil"
 
 signal satisfaction_changed(satisfied: bool)
 

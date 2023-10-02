@@ -3,9 +3,9 @@ on: [push, workflow_dispatch]
 
 env:
   GODOT_VERSION: 4.1.1
-  EXPORT_NAME: ldjam54
+  EXPORT_NAME: pickyplants
   ITCHIO_USERNAME: chybby
-  ITCHIO_GAME: ldjam54
+  ITCHIO_GAME: pickyplants
 
 jobs:
   build-windows:
