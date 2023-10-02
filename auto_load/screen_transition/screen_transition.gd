@@ -26,12 +26,9 @@ func transition_to_packed_scene(scene: PackedScene) -> void:
 
 
 func transition_to_scene(scene: Node) -> void:
-    get_tree().paused = true
-    transition()
-    await transitioned_halfway
-    get_tree().paused = false
-    get_tree().unload_current_scene()
-    get_tree().root.add_child(scene)
+    var packed_scene = PackedScene.new()
+    packed_scene.pack(scene)
+    transition_to_packed_scene(packed_scene)
 
 
 func transition_then(callback: Callable) -> void:
