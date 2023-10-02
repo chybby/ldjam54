@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=16 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_et6ra"]
 [ext_resource type="Theme" uid="uid://uxch4vusgo5r" path="res://theme.tres" id="2_kffk4"]
+[ext_resource type="Texture2D" uid="uid://dbbgqtllo3a1v" path="res://assets/confetti_anim.png" id="2_oej8p"]
 [ext_resource type="PackedScene" uid="uid://dnper018d3wgs" path="res://ui/sound_button/sound_button.tscn" id="3_voasl"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_yglf5"]
 [ext_resource type="PackedScene" uid="uid://d3nwguycs25fy" path="res://scenes/plant/cactus_plant/cactus_plant.tscn" id="4_0r61a"]
@@ -13,8 +14,47 @@
 [ext_resource type="PackedScene" uid="uid://ci4uwve81ubdv" path="res://scenes/plant/actual_fern_plant/actual_fern_plant.tscn" id="6_jva7l"]
 [ext_resource type="Texture2D" uid="uid://ht3d7t32ll8b" path="res://assets/title.png" id="10_hxcd3"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ira28"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5leel"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+gravity = Vector3(0, 196, 0)
+initial_velocity_min = 400.0
+initial_velocity_max = 550.0
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = -90.0
+angle_max = 90.0
+scale_min = 0.3
+scale_max = 0.3
+turbulence_enabled = true
+turbulence_noise_strength = 6.15
+turbulence_noise_scale = 1.56
+anim_offset_max = 1.0
+
 [node name="MainMenuScreen" type="CanvasLayer"]
 script = ExtResource("1_imu6r")
+
+[node name="Confetti" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+material = SubResource("CanvasItemMaterial_ira28")
+position = Vector2(123, 139)
+emitting = false
+amount = 75
+process_material = SubResource("ParticleProcessMaterial_5leel")
+texture = ExtResource("2_oej8p")
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+collision_base_size = 0.0
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("2_et6ra")]
 unique_name_in_owner = true
