@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5bffi57u6y1m"]
+[gd_scene load_steps=9 format=3 uid="uid://c5bffi57u6y1m"]
 
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
