@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5bffi57u6y1m"]
+[gd_scene load_steps=10 format=3 uid="uid://c5bffi57u6y1m"]
 
 [ext_resource type="PackedScene" uid="uid://ipjyx5wek6wr" path="res://scenes/manager/held_item_manager/held_item_manager.tscn" id="1_dn0dj"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_fnt08"]
@@ -6,15 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="5_pbaip"]
 [ext_resource type="AudioStream" uid="uid://c7iw6ffcaulqh" path="res://assets/success.mp3" id="7_3qbs1"]
-[ext_resource type="Texture2D" uid="uid://8eecr57sb6kt" path="res://assets/spritesheet.png" id="7_ia2o5"]
+[ext_resource type="Texture2D" uid="uid://dbbgqtllo3a1v" path="res://assets/confetti_anim.png" id="7_4m6eo"]
 
-[sub_resource type="Gradient" id="Gradient_2mfli"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0.0116959, 0.134503, 0.25731, 0.403509, 0.561404, 0.707602, 0.812865, 0.918129)
-colors = PackedColorArray(0.558594, 0.96875, 0.882813, 1, 0.558594, 0.824219, 0.996094, 1, 0.65625, 0.515625, 0.949219, 1, 0.980469, 0.996094, 0.523438, 1, 0.117188, 0.734375, 0.449219, 1, 0.886719, 0.78125, 0.585938, 1, 0.9375, 0.308594, 0.46875, 1, 0.980469, 0.417969, 0.113281, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_3cuii"]
-gradient = SubResource("Gradient_2mfli")
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nt0h7"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ujmiu"]
 particle_flag_disable_z = true
@@ -28,16 +26,12 @@ orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 angle_min = -90.0
 angle_max = 90.0
-scale_min = 0.8
-scale_max = 1.1
-color_initial_ramp = SubResource("GradientTexture1D_3cuii")
+scale_min = 0.3
+scale_max = 0.3
 turbulence_enabled = true
 turbulence_noise_strength = 6.15
 turbulence_noise_scale = 1.56
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n566y"]
-atlas = ExtResource("7_ia2o5")
-region = Rect2(970, 1, 16, 16)
+anim_offset_max = 1.0
 
 [node name="Main" type="Node2D" groups=["main"]]
 script = ExtResource("1_fnt08")
@@ -62,11 +56,12 @@ stream = ExtResource("7_3qbs1")
 [node name="Confetti" type="GPUParticles2D" parent="."]
 unique_name_in_owner = true
 process_mode = 3
+material = SubResource("CanvasItemMaterial_nt0h7")
 position = Vector2(123, 139)
 emitting = false
 amount = 75
 process_material = SubResource("ParticleProcessMaterial_ujmiu")
-texture = SubResource("AtlasTexture_n566y")
+texture = ExtResource("7_4m6eo")
 lifetime = 5.0
 one_shot = true
 explosiveness = 1.0
