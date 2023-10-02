@@ -32,7 +32,7 @@ void fragment() {
 //        }
 //    }
 
-    float circle_density = 10.0;
+    float circle_density = 0.01 / min(SCREEN_PIXEL_SIZE.x, SCREEN_PIXEL_SIZE.y);
 
     vec2 resolution = 1.0 / SCREEN_PIXEL_SIZE;
 
@@ -42,13 +42,13 @@ void fragment() {
     uv = mod(uv * circle_density, 1.0) - vec2(0.5, 0.5);
 
     if (transition_progress < 0.5) {
-        if (length(uv) + 0.5 * UV.x + 0.5 * UV.y < transition_progress * 4.0) {
+        if (length(uv) + 0.5 * (UV.x + UV.y) < transition_progress * 4.0) {
             COLOR = transition_color;
         } else {
             COLOR.a = 0.0;
         }
     } else {
-        if (length(uv) + 0.5 * UV.x + 0.5 * UV.y < (transition_progress - 0.5) * 4.0) {
+        if (length(uv) + 0.5 * (UV.x + UV.y) < (transition_progress - 0.5) * 4.0) {
             COLOR.a = 0.0;
         } else {
             COLOR = transition_color;
