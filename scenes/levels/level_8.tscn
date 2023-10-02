@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_gwbgw"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_eniur"]
-[ext_resource type="PackedScene" uid="uid://bf1mabpq22dwa" path="res://scenes/levels/hi.tscn" id="2_erhfs"]
+[ext_resource type="PackedScene" uid="uid://bq4qvolnr1n3p" path="res://scenes/levels/hi.tscn" id="2_erhfs"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_2b2b0"]
 [ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="4_il8o5"]
 [ext_resource type="PackedScene" uid="uid://c1ai2lkvqb6y" path="res://scenes/plant/heart_plant/heart_plant.tscn" id="5_8l3m4"]

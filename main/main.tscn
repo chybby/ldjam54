@@ -61,12 +61,13 @@ stream = ExtResource("7_3qbs1")
 
 [node name="Confetti" type="GPUParticles2D" parent="."]
 unique_name_in_owner = true
+process_mode = 3
 position = Vector2(123, 139)
 emitting = false
 amount = 75
 process_material = SubResource("ParticleProcessMaterial_ujmiu")
 texture = SubResource("AtlasTexture_n566y")
-lifetime = 10.0
+lifetime = 5.0
 one_shot = true
 explosiveness = 1.0
 collision_base_size = 0.0
