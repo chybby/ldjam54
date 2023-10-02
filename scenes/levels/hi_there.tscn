@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq4qvolnr1n3p"]
+[gd_scene load_steps=7 format=3 uid="uid://cr6brgb8lqf4y"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ld3qf"]
-[ext_resource type="PackedScene" uid="uid://ct5yc1apsgkfp" path="res://scenes/levels/incompatible_modifications.tscn" id="2_r87xv"]
+[ext_resource type="PackedScene" uid="uid://ct5yc1apsgkfp" path="res://scenes/levels/soil_incompatible.tscn" id="2_tcilq"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="3_q6abx"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="4_aw16c"]
 [ext_resource type="PackedScene" uid="uid://ci4uwve81ubdv" path="res://scenes/plant/actual_fern_plant/actual_fern_plant.tscn" id="5_yclwx"]
@@ -11,7 +11,7 @@
 script = ExtResource("1_ld3qf")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3"), NodePath("PlantPot4"), NodePath("PlantPot5"), NodePath("PlantPot6")]
-next_level_scene = ExtResource("2_r87xv")
+next_level_scene = ExtResource("2_tcilq")
 level_name = "Hi There"
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("3_q6abx")]

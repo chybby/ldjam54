@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://p01lgyfujkbe"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_25lds"]
-[ext_resource type="PackedScene" uid="uid://bf1mabpq22dwa" path="res://scenes/levels/hi_there.tscn" id="2_wo6un"]
+[ext_resource type="PackedScene" uid="uid://cuiewl18yf5g" path="res://scenes/levels/war_at_the_crossing.tscn" id="2_85mri"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="3_22skg"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="4_r4fgy"]
 [ext_resource type="PackedScene" uid="uid://6yjj44utwyud" path="res://scenes/plant/grass_plant/grass_plant.tscn" id="5_m50tw"]
@@ -14,7 +14,7 @@
 script = ExtResource("1_25lds")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot6"), NodePath("PlantPot7"), NodePath("PlantPot2"), NodePath("PlantPot3"), NodePath("PlantPot8"), NodePath("PlantPot4"), NodePath("PlantPot5"), NodePath("PlantPot9"), NodePath("PlantPot10"), NodePath("PlantPot11"), NodePath("PlantPot12")]
-next_level_scene = ExtResource("2_wo6un")
+next_level_scene = ExtResource("2_85mri")
 level_name = "Leave Some Room"
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("3_22skg")]

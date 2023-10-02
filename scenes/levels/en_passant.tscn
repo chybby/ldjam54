@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cyxmxjvgfwafn"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_eisr5"]
-[ext_resource type="PackedScene" uid="uid://ewoh1qo6latv" path="res://scenes/levels/unfair_fight.tscn" id="2_npp2d"]
+[ext_resource type="PackedScene" uid="uid://bb75cpaqd55aq" path="res://scenes/levels/conga_line.tscn" id="2_vy37r"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="3_64das"]
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="4_qw50r"]
 [ext_resource type="PackedScene" uid="uid://b4tj8jhmnl6oh" path="res://scenes/plant/black_bishop_plant/black_bishop_plant.tscn" id="5_hvut5"]
@@ -19,7 +19,7 @@
 script = ExtResource("1_eisr5")
 tile_map = NodePath("TerrariumTileMap")
 plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3"), NodePath("PlantPot4"), NodePath("PlantPot5"), NodePath("PlantPot6"), NodePath("PlantPot7"), NodePath("PlantPot8"), NodePath("PlantPot9"), NodePath("PlantPot10")]
-next_level_scene = ExtResource("2_npp2d")
+next_level_scene = ExtResource("2_vy37r")
 level_name = "En Passant"
 
 [node name="TerrariumTileMap" parent="." instance=ExtResource("3_64das")]

@@ -1,31 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuiewl18yf5g"]
+[gd_scene load_steps=11 format=3 uid="uid://cuiewl18yf5g"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_qlqv2"]
-[ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_u8bsk"]
-[ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_ftoye"]
-[ext_resource type="PackedScene" uid="uid://ci4uwve81ubdv" path="res://scenes/plant/actual_fern_plant/actual_fern_plant.tscn" id="4_xe5au"]
-[ext_resource type="PackedScene" uid="uid://c1ai2lkvqb6y" path="res://scenes/plant/heart_plant/heart_plant.tscn" id="5_u33bn"]
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_nenau"]
+[ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_6nkf5"]
+[ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_i0k6p"]
+[ext_resource type="PackedScene" uid="uid://3krx154v0jta" path="res://scenes/plant/black_honse_plant/black_honse_plant.tscn" id="4_f8xqv"]
+[ext_resource type="PackedScene" uid="uid://cv0hxh31p66yp" path="res://scenes/plant/white_honse_plant/white_honse_plant.tscn" id="5_wgejq"]
+[ext_resource type="PackedScene" uid="uid://demke2mm1vncw" path="res://scenes/plant/brown_mushroom_plant/brown_mushroom_plant.tscn" id="6_2pv87"]
+[ext_resource type="PackedScene" uid="uid://61nhlim6fo5m" path="res://scenes/plant/red_mushroom_plant/red_mushroom_plant.tscn" id="7_5xtmn"]
+[ext_resource type="PackedScene" uid="uid://bb4f47h4d3ukq" path="res://scenes/plant/fern_plant/fern_plant.tscn" id="8_3v7ge"]
+[ext_resource type="PackedScene" uid="uid://cpavn2v4ue26g" path="res://scenes/plant/bamboo_plant/bamboo_plant.tscn" id="9_whnw0"]
+[ext_resource type="PackedScene" uid="uid://b0qtt0iigf075" path="res://scenes/plant/cactus2_plant/cactus2_plant.tscn" id="10_fdhpt"]
 
-[node name="LevelEnd" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
-script = ExtResource("1_qlqv2")
+[node name="LevelWar" type="Node2D" node_paths=PackedStringArray("tile_map", "plant_pots")]
+script = ExtResource("1_nenau")
 tile_map = NodePath("TerrariumTileMap")
-plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot3")]
-level_name = "The End"
+plant_pots = [NodePath("PlantPot"), NodePath("PlantPot2"), NodePath("PlantPot7"), NodePath("PlantPot8"), NodePath("PlantPot3"), NodePath("PlantPot4"), NodePath("PlantPot5"), NodePath("PlantPot6"), NodePath("PlantPot9"), NodePath("PlantPot10"), NodePath("PlantPot11"), NodePath("PlantPot12")]
+level_name = "War At The Crossing"
 
-[node name="TerrariumTileMap" parent="." instance=ExtResource("2_u8bsk")]
+[node name="TerrariumTileMap" parent="." instance=ExtResource("2_6nkf5")]
 position = Vector2(61, -8)
 layer_0/tile_data = PackedInt32Array(131070, 1966080, 0, 131071, 1966080, 0, 65536, 1966080, 0, 65537, 1966080, 0, 65538, 1966080, 0, 65539, 1966080, 0, 65540, 1966080, 0, 65541, 1966080, 0, 65542, 1966080, 0, 65543, 1966080, 0, 65544, 1966080, 0, 65545, 1966080, 0, 131081, 1966080, 0, 196617, 1900544, 0, 262153, 1900544, 0, 327689, 1900544, 0, 393225, 1900544, 0, 393224, 1900544, 0, 393223, 1900544, 0, 393222, 1900544, 0, 393221, 1900544, 0, 393220, 1900544, 0, 393219, 1900544, 0, 393218, 1900544, 0, 393217, 1900544, 0, 393216, 1900544, 0, 458751, 1900544, 0, 458750, 1900544, 0, 393214, 1900544, 0, 327678, 1900544, 0, 262142, 1900544, 0, 196606, 1966080, 0, 196607, 1966080, 0, 131072, 1966080, 0, 131073, 1966080, 0, 131074, 1966080, 0, 131075, 1966080, 0, 131076, 1966080, 0, 131077, 1966080, 0, 131078, 1966080, 0, 131079, 1966080, 0, 131080, 1966080, 0, 196616, 1900544, 0, 196615, 1900544, 0, 196614, 1900544, 0, 196613, 1900544, 0, 196612, 1900544, 0, 196611, 1900544, 0, 196610, 1900544, 0, 196609, 1900544, 0, 196608, 1900544, 0, 262143, 1900544, 0, 327679, 1900544, 0, 393215, 1900544, 0, 327680, 1900544, 0, 327681, 1900544, 0, 327682, 1900544, 0, 327683, 1900544, 0, 327684, 1900544, 0, 327685, 1900544, 0, 327686, 1900544, 0, 327687, 1900544, 0, 327688, 1900544, 0, 262152, 1900544, 0, 262151, 1900544, 0, 262150, 1900544, 0, 262149, 1900544, 0, 262148, 1900544, 0, 262147, 1900544, 0, 262146, 1900544, 0, 262145, 1900544, 0, 262144, 1900544, 0, 65534, 1966080, 0, 65535, 1966080, 0, 0, 1966080, 0, 1, 1966080, 0, 2, 1966080, 0, 3, 1966080, 0, 4, 1966080, 0, 5, 1966080, 0, 6, 1966080, 0, 7, 1966080, 0, 8, 1966080, 0, 9, 1966080, 0, -65527, 1966080, 0, -65528, 1966080, 0, -65529, 1966080, 0, -65536, 1966080, 0, -1, 1966080, 0, -2, 1966080, 0, -65535, 1966080, 0, -65534, 1966080, 0, -65533, 1966080, 0, -65532, 1966080, 0, -65531, 1966080, 0, -65530, 1966080, 0, 65546, 1966080, 0, 65547, 1966080, 0, 65548, 1966080, 0, 65549, 1966080, 0, 131085, 1966080, 0, 196621, 1900544, 0, 262157, 1900544, 0, 327693, 1900544, 0, 393229, 1900544, 0, 458765, 1900544, 0, 524301, 1900544, 0, 589837, 1900544, 0, 589836, 1900544, 0, 589835, 1900544, 0, 589834, 1900544, 0, 589833, 1900544, 0, 589832, 1900544, 0, 589831, 1900544, 0, 589830, 1900544, 0, 589829, 1900544, 0, 589828, 1900544, 0, 589827, 1900544, 0, 589826, 1900544, 0, 589825, 1900544, 0, 589824, 1900544, 0, 655359, 1900544, 0, 655358, 1900544, 0, 655357, 1900544, 0, 655356, 1900544, 0, 655355, 1900544, 0, 589819, 1900544, 0, 524283, 1900544, 0, 458747, 1900544, 0, 393211, 1900544, 0, 327675, 1900544, 0, 262139, 1900544, 0, 196603, 1966080, 0, 131067, 1966080, 0, 131066, 1966080, 0, 196602, 1966080, 0, 262138, 1900544, 0, 327674, 1900544, 0, 393210, 1900544, 0, 458746, 1900544, 0, 524282, 1900544, 0, 589818, 1900544, 0, 655354, 1900544, 0, 196604, 1966080, 0, 131068, 1966080, 0, 196605, 1966080, 0, 262141, 1900544, 0, 131069, 1966080, 0, 262140, 1900544, 0, 327676, 1900544, 0, 393212, 1900544, 0, 458748, 1900544, 0, 524284, 1900544, 0, 589820, 1900544, 0, 524285, 1900544, 0, 458749, 1900544, 0, 393213, 1900544, 0, 327677, 1900544, 0, 589821, 1900544, 0, 589822, 1900544, 0, 524286, 1900544, 0, 524287, 1900544, 0, 458752, 1900544, 0, 458753, 1900544, 0, 458754, 1900544, 0, 458755, 1900544, 0, 458756, 1900544, 0, 458757, 1900544, 0, 458758, 1900544, 0, 458759, 1900544, 0, 458760, 1900544, 0, 458761, 1900544, 0, 458762, 1900544, 0, 458763, 1900544, 0, 458764, 1900544, 0, 524300, 1900544, 0, 524299, 1900544, 0, 524298, 1900544, 0, 524297, 1900544, 0, 524296, 1900544, 0, 524295, 1900544, 0, 524294, 1900544, 0, 524293, 1900544, 0, 524292, 1900544, 0, 524291, 1900544, 0, 524290, 1900544, 0, 524289, 1900544, 0, 524288, 1900544, 0, 589823, 1900544, 0, 393226, 1900544, 0, 327690, 1900544, 0, 262154, 1900544, 0, 196618, 1900544, 0, 131082, 1966080, 0, 131083, 1966080, 0, 131084, 1966080, 0, 196620, 1900544, 0, 262156, 1900544, 0, 327692, 1900544, 0, 327691, 1900544, 0, 393227, 1900544, 0, 262155, 1900544, 0, 393228, 1900544, 0, 196619, 1900544, 0, 10, 1966080, 0, 11, 1966080, 0, 12, 1966080, 0, 13, 1966080, 0, -65523, 1966080, 0, -131059, 1966080, 0, -196595, 1966080, 0, -196596, 1966080, 0, -196597, 1966080, 0, -196598, 1966080, 0, -196599, 1966080, 0, -196600, 1966080, 0, -131065, 1966080, 0, -131066, 1966080, 0, -131067, 1966080, 0, -131068, 1966080, 0, -131069, 1966080, 0, -131070, 1966080, 0, -131071, 1966080, 0, -131072, 1966080, 0, -65537, 1966080, 0, -65538, 1966080, 0, -65539, 1966080, 0, -131075, 1966080, 0, -131076, 1966080, 0, -131077, 1966080, 0, -131078, 1966080, 0, -65542, 1966080, 0, -6, 1966080, 0, 65530, 1966080, 0, 65531, 1966080, 0, 65532, 1966080, 0, 65533, 1966080, 0, -3, 1966080, 0, -4, 1966080, 0, -5, 1966080, 0, -65541, 1966080, 0, -65540, 1966080, 0, -131074, 1966080, 0, -131073, 1966080, 0, -196608, 1966080, 0, -196607, 1966080, 0, -196606, 1966080, 0, -196605, 1966080, 0, -196604, 1966080, 0, -196603, 1966080, 0, -196602, 1966080, 0, -196601, 1966080, 0, -131063, 1966080, 0, -131064, 1966080, 0, -131062, 1966080, 0, -131061, 1966080, 0, -131060, 1966080, 0, -65524, 1966080, 0, -65525, 1966080, 0, -65526, 1966080, 0)
-layer_1/tile_data = PackedInt32Array(393218, 1638400, 0, 393219, 1703936, 0, 393220, 1769472, 0, 393221, 1835008, 0, 327685, 1441792, 0, 262149, 1245184, 0, 262148, 1179648, 0, 262147, 1179648, 0, 262146, 1114112, 0, 262145, 1048576, 0, 327681, 1376256, 0, 393217, 1572864, 0)
-layer_2/tile_data = PackedInt32Array(327683, 131072, 0, 327684, 0, 0, 327682, 0, 0)
+layer_1/tile_data = PackedInt32Array(196608, 1376256, 0, 262144, 1507328, 0, 327680, 1507328, 0, 393216, 1507328, 0, 458752, 1572864, 0, 458753, 1638400, 0, 458754, 1703936, 0, 458755, 1703936, 0, 458756, 1703936, 0, 458757, 1769472, 0, 458758, 1835008, 0, 393222, 1441792, 0, 327686, 1441792, 0, 262150, 1441792, 0, 196614, 1441792, 0, 131078, 1245184, 0, 131077, 1179648, 0, 131076, 1179648, 0, 131075, 1179648, 0, 131074, 1179648, 0, 131073, 1114112, 0, 131072, 1048576, 0)
+layer_2/tile_data = PackedInt32Array(327683, 65536, 0, 327682, 65536, 0, 393217, 65536, 0, 393218, 65536, 0, 393219, 65536, 0, 393220, 65536, 0, 393221, 65536, 0, 327685, 0, 0, 262149, 65536, 0, 262147, 65536, 0, 262146, 0, 0, 262145, 0, 0, 327681, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 196611, 65536, 0, 196612, 65536, 0, 196613, 65536, 0, 327684, 0, 0, 262148, 65536, 0)
+layer_3/tile_data = PackedInt32Array(393218, 196608, 0, 196612, 196608, 0, 393221, 786432, 0, 196609, 786432, 0, 196611, 786432, 0, 262147, 786432, 0, 327683, 786432, 0, 393219, 786432, 0)
 
-[node name="PlantPot" parent="." instance=ExtResource("3_ftoye")]
-position = Vector2(197, 75)
-initial_plant_scene = ExtResource("4_xe5au")
+[node name="PlantPot" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(42, 90)
+initial_plant_scene = ExtResource("4_f8xqv")
 
-[node name="PlantPot2" parent="." instance=ExtResource("3_ftoye")]
-position = Vector2(37, 107)
-initial_plant_scene = ExtResource("4_xe5au")
+[node name="PlantPot2" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(212, 59)
+initial_plant_scene = ExtResource("5_wgejq")
 
-[node name="PlantPot3" parent="." instance=ExtResource("3_ftoye")]
-position = Vector2(58, 64)
-initial_plant_scene = ExtResource("5_u33bn")
+[node name="PlantPot7" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(21, 108)
+initial_plant_scene = ExtResource("4_f8xqv")
+
+[node name="PlantPot8" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(223, 90)
+initial_plant_scene = ExtResource("5_wgejq")
+
+[node name="PlantPot3" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(58, 63)
+initial_plant_scene = ExtResource("6_2pv87")
+
+[node name="PlantPot4" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(38, 57)
+initial_plant_scene = ExtResource("7_5xtmn")
+
+[node name="PlantPot5" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(20, 76)
+initial_plant_scene = ExtResource("8_3v7ge")
+
+[node name="PlantPot6" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(62, 86)
+initial_plant_scene = ExtResource("8_3v7ge")
+
+[node name="PlantPot9" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(184, 108)
+initial_plant_scene = ExtResource("9_whnw0")
+
+[node name="PlantPot10" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(174, 57)
+initial_plant_scene = ExtResource("9_whnw0")
+
+[node name="PlantPot11" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(175, 84)
+initial_plant_scene = ExtResource("10_fdhpt")
+
+[node name="PlantPot12" parent="." instance=ExtResource("3_i0k6p")]
+position = Vector2(197, 82)
+initial_plant_scene = ExtResource("10_fdhpt")
