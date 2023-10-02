@@ -1,11 +1,10 @@
 extends Node2D
 
 @export var first_level_scene: PackedScene
+@export var level_number: int = 1
 
 @onready var level: Node2D = %Level
 @onready var hud: CanvasLayer = %HUD
-
-var level_number := 1
 
 
 func _ready() -> void:

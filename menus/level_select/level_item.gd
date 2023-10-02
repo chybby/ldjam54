@@ -22,4 +22,5 @@ func set_level(level_scene: PackedScene, level_name: String, level_number: int) 
 func on_play_button_pressed() -> void:
     var main_instance = main_scene.instantiate()
     main_instance.first_level_scene = level_scene
+    main_instance.level_number = level_number
     ScreenTransition.transition_to_scene(main_instance)
