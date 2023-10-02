@@ -5,6 +5,7 @@ signal next_level_button_pressed
 @onready var tooltip: Label = %Tooltip
 @onready var tooltip_container: MarginContainer = %TooltipContainer
 @onready var next_level_button: MarginContainer = %NextLevelButton
+@onready var next_level_button_container: MarginContainer = %NextLevelButtonContainer
 @onready var level_name: Label = %LevelName
 @onready var level_name_container: PanelContainer = %LevelNameContainer
 
@@ -14,7 +15,7 @@ var target_tooltip_text := ""
 var next_text := ""
 
 var tooltip_original_position: Vector2
-var next_level_button_original_position = null
+var next_level_button_container_original_position = null
 
 var tooltip_tween: Tween
 
@@ -25,11 +26,11 @@ func _ready():
 
     await get_tree().process_frame
     tooltip_original_position = tooltip_container.position
-    next_level_button_original_position = next_level_button.position
+    next_level_button_container_original_position = next_level_button_container.position
 
     var tween = create_tween()
     tween.tween_property(tooltip_container, "position", tooltip_original_position + Vector2.DOWN * 30, 0.0)
-    tween.tween_property(next_level_button, "position", next_level_button_original_position + Vector2.DOWN * 30, 0.0)
+    tween.tween_property(next_level_button_container, "position", next_level_button_container_original_position + Vector2.DOWN * 30, 0.0)
 
 
 func _process(delta: float) -> void:
@@ -44,7 +45,7 @@ func show_next_level_button() -> void:
     level_complete = true
     CursorManager.set_cursor(CursorManager.POINTING)
     var tween = create_tween()
-    tween.tween_property(next_level_button, "position", next_level_button_original_position, 0.5)\
+    tween.tween_property(next_level_button_container, "position", next_level_button_container_original_position, 0.5)\
         .set_ease(Tween.EASE_OUT)\
         .set_trans(Tween.TRANS_BACK)
 
@@ -98,9 +99,9 @@ func reset():
     level_complete = false
     tooltip.text = ""
     next_text = ""
-    if next_level_button_original_position != null:
+    if next_level_button_container_original_position != null:
         var tween = create_tween()
-        tween.tween_property(next_level_button, "position", next_level_button_original_position + Vector2.DOWN * 30, 0.0)
+        tween.tween_property(next_level_button_container, "position", next_level_button_container_original_position + Vector2.DOWN * 30, 0.0)
 
 
 func on_next_level_button_pressed() -> void:
