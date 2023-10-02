@@ -11,7 +11,7 @@ func _ready() -> void:
     play_button.pressed.connect(on_play_button_pressed)
     level_select_button.pressed.connect(on_level_select_button_pressed)
     settings_button.pressed.connect(on_settings_button_pressed)
-    MusicManager.add_music(%Audio)
+    MusicManager.add_or_reset_music(%Audio)
 
 
 func on_play_button_pressed() -> void:
