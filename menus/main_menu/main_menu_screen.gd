@@ -7,6 +7,7 @@ extends CanvasLayer
 @onready var settings_button: MarginContainer = %SettingsButton
 @onready var settings: CanvasLayer = %Settings
 @onready var terrarium_tile_map: TileMap = %TerrariumTileMap
+@onready var menu_music := preload("res://assets/menu_music.mp3")
 
 
 func _ready() -> void:
@@ -14,7 +15,7 @@ func _ready() -> void:
     play_button.pressed.connect(on_play_button_pressed)
     level_select_button.pressed.connect(on_level_select_button_pressed)
     settings_button.pressed.connect(on_settings_button_pressed)
-    MusicManager.add_or_reset_music(%Audio)
+    MusicManager.add_or_reset_music(menu_music)
 
 
 func on_play_button_pressed() -> void:

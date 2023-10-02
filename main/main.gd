@@ -4,12 +4,16 @@ extends Node2D
 
 @onready var level: Node2D = %Level
 @onready var hud: CanvasLayer = %HUD
+@onready var success_audio_player: AudioStreamPlayer = %SuccessAudioPlayer
+@onready var success_g_maj := preload("res://assets/success_g_maj.mp3")
+@onready var success_c_maj := preload("res://assets/success_c_maj.mp3")
+@onready var bg_music := preload("res://assets/bg_music_extras.mp3")
 
 var level_number := 1
 
 
 func _ready() -> void:
-    MusicManager.add_music(%Audio)
+    MusicManager.add_music(bg_music)
     load_level(first_level_scene)
 
 
@@ -40,6 +44,14 @@ func on_end_game() -> void:
 
 func on_level_complete(next_level_scene: PackedScene) -> void:
     disable_terrarium_input()
+
+    var key := MusicManager.get_music_key()
+    var sound := success_g_maj
+    if key == "c":
+        sound = success_c_maj
+    success_audio_player.stream = sound
+    success_audio_player.play()
+
     hud.show_next_level_button()
     await hud.next_level_button_pressed
     ScreenTransition.transition_then(func():

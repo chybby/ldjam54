@@ -9,7 +9,8 @@ signal pressed
 @onready var button: Button = %Button
 @onready var label: Label = %Label
 @onready var margin_container: MarginContainer = %MarginContainer
-@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var click_audio: AudioStreamPlayer = %ClickAudio
+@onready var hover_audio: AudioStreamPlayer = %HoverAudio
 
 
 var initial_label_position: Vector2
@@ -34,7 +35,7 @@ func _process(delta: float) -> void:
 
 
 func on_button_pressed() -> void:
-    audio_stream_player.play()
+    click_audio.play()
     pressed.emit()
 
 
@@ -46,3 +47,7 @@ func on_layout() -> void:
         return
 
     initial_label_position = label.position
+
+
+func _on_button_mouse_entered():
+    hover_audio.play()

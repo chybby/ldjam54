@@ -4,3 +4,7 @@
 
 [node name="HeldItemManager" type="Node2D" groups=["held_item_manager"]]
 script = ExtResource("1_pl5fh")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = 10.0

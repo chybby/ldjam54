@@ -1,12 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnper018d3wgs"]
+[gd_scene load_steps=3 format=3 uid="uid://dnper018d3wgs"]
 
 [ext_resource type="Script" path="res://ui/sound_button/sound_button.gd" id="1_5g6mr"]
-[ext_resource type="AudioStream" uid="uid://cb3uxfd8kmy1t" path="res://assets/fart.mp3" id="2_j6cot"]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6h1ll"]
-streams_count = 1
-stream_0/stream = ExtResource("2_j6cot")
-stream_0/weight = 1.0
+[ext_resource type="AudioStream" uid="uid://dnxw0upd0rtos" path="res://assets/button_sound.mp3" id="2_ghe3d"]
 
 [node name="SoundButton" type="MarginContainer"]
 offset_right = 17.0
@@ -33,7 +28,18 @@ unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 process_mode = 3
-stream = SubResource("AudioStreamRandomizer_6h1ll")
+stream = ExtResource("2_ghe3d")
+volume_db = -5.0
+pitch_scale = 0.9
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+stream = ExtResource("2_ghe3d")
+volume_db = -5.0
+pitch_scale = 0.6
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]

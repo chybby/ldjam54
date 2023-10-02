@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmcgmyith6826"]
+[gd_scene load_steps=12 format=3 uid="uid://dmcgmyith6826"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu_screen.gd" id="1_imu6r"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_et6ra"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://n0neq0p7yqtg" path="res://scenes/plant_pot/plant_pot.tscn" id="3_yglf5"]
 [ext_resource type="PackedScene" uid="uid://d3nwguycs25fy" path="res://scenes/plant/cactus_plant/cactus_plant.tscn" id="4_0r61a"]
 [ext_resource type="PackedScene" uid="uid://bco0pq5m5c2yt" path="res://menus/level_select/level_select.tscn" id="4_f7j43"]
-[ext_resource type="AudioStream" uid="uid://bhkmtqx30y01g" path="res://menus/main_menu/menu_music.mp3" id="4_vbbsm"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="4_weer2"]
 [ext_resource type="PackedScene" uid="uid://beaywhoxf8xw1" path="res://scenes/plant/sprig_plant/sprig_plant.tscn" id="5_5u8yb"]
 [ext_resource type="PackedScene" uid="uid://b0qtt0iigf075" path="res://scenes/plant/cactus2_plant/cactus2_plant.tscn" id="5_l0tyk"]
@@ -92,7 +91,3 @@ unique_name_in_owner = true
 layer = 3
 visible = false
 enable_keyboard = false
-
-[node name="Audio" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("4_vbbsm")
