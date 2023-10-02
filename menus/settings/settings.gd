@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 func _input(event):
-    if not enable_keyboard:
+    if not enable_keyboard or animation_player.is_playing():
         return
     if event.is_action_pressed("pause"):
         enable_disable()
