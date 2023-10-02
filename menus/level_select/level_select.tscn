@@ -13,6 +13,14 @@ region = Rect2(902, 1, 16, 16)
 script = ExtResource("1_hgoj8")
 first_level_scene = ExtResource("2_v3ksh")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.243137, 0.207843, 0.27451, 0.588235)
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
