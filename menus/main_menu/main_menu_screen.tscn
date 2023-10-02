@@ -31,6 +31,10 @@ initial_plant_scene = ExtResource("4_0r61a")
 position = Vector2(67, 112)
 initial_plant_scene = ExtResource("5_5u8yb")
 
+[node name="PlantPot3" parent="TerrariumTileMap" instance=ExtResource("3_yglf5")]
+position = Vector2(38, 135)
+initial_plant_scene = ExtResource("6_jva7l")
+
 [node name="Cactus2Plant" parent="TerrariumTileMap" instance=ExtResource("5_l0tyk")]
 position = Vector2(200, 104)
 

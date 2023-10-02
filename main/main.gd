@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var first_level_scene: PackedScene
+@export var level_number: int = 1
 
 @onready var level: Node2D = %Level
 @onready var hud: CanvasLayer = %HUD
@@ -8,8 +9,6 @@ extends Node2D
 @onready var success_g_maj := preload("res://assets/success_g_maj.mp3")
 @onready var success_c_maj := preload("res://assets/success_c_maj.mp3")
 @onready var bg_music := preload("res://assets/bg_music_extras.mp3")
-
-var level_number := 1
 
 
 func _ready() -> void:
