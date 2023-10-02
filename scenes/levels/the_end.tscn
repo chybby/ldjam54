@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuiewl18yf5g"]
+[gd_scene load_steps=6 format=3 uid="uid://dulgkjpywvmjq"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_qlqv2"]
 [ext_resource type="PackedScene" uid="uid://ctypbkurq2og" path="res://scenes/terrarium_tile_map/terrarium_tile_map.tscn" id="2_u8bsk"]

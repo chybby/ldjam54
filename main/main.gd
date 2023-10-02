@@ -9,6 +9,7 @@ extends Node2D
 @onready var success_g_maj := preload("res://assets/success_g_maj.mp3")
 @onready var success_c_maj := preload("res://assets/success_c_maj.mp3")
 @onready var bg_music := preload("res://assets/bg_music_extras.mp3")
+@onready var confetti: GPUParticles2D = %Confetti
 
 
 func _ready() -> void:
@@ -36,6 +37,8 @@ func disable_terrarium_input() -> void:
 
 func on_end_game() -> void:
     disable_terrarium_input()
+    _play_success_sound()
+    confetti.restart()
     hud.show_next_level_button()
     await hud.next_level_button_pressed
     ScreenTransition.transition_to_scene_file("res://menus/game_over/game_over_screen.tscn")
@@ -43,16 +46,18 @@ func on_end_game() -> void:
 
 func on_level_complete(next_level_scene: PackedScene) -> void:
     disable_terrarium_input()
+    _play_success_sound()
+    confetti.restart()
+    hud.show_next_level_button()
+    await hud.next_level_button_pressed
+    ScreenTransition.transition_then(func():
+        load_level(next_level_scene)
+    )
 
+func _play_success_sound():
     var key := MusicManager.get_music_key()
     var sound := success_g_maj
     if key == "c":
         sound = success_c_maj
     success_audio_player.stream = sound
     success_audio_player.play()
-
-    hud.show_next_level_button()
-    await hud.next_level_button_pressed
-    ScreenTransition.transition_then(func():
-        load_level(next_level_scene)
-    )
