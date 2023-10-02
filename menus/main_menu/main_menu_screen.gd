@@ -8,9 +8,11 @@ extends CanvasLayer
 @onready var settings: CanvasLayer = %Settings
 @onready var terrarium_tile_map: TileMap = %TerrariumTileMap
 @onready var menu_music := preload("res://assets/menu_music.mp3")
+@onready var confetti: GPUParticles2D = %Confetti
 
 
 func _ready() -> void:
+    confetti.emitting = true
     terrarium_tile_map.set_process_input(false)
     play_button.pressed.connect(on_play_button_pressed)
     level_select_button.pressed.connect(on_level_select_button_pressed)

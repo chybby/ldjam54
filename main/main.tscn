@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d3kd8wyxtda4o" path="res://scenes/levels/starting_out.tscn" id="2_stmhf"]
 [ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="5_pbaip"]
+[ext_resource type="Material" uid="uid://xs7ug5l33uet" path="res://resources/confetti_particles.tres" id="6_34vkj"]
 [ext_resource type="Texture2D" uid="uid://dbbgqtllo3a1v" path="res://assets/confetti_anim.png" id="7_4m6eo"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nt0h7"]
@@ -12,25 +13,6 @@ particles_animation = true
 particles_anim_h_frames = 8
 particles_anim_v_frames = 1
 particles_anim_loop = false
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ujmiu"]
-particle_flag_disable_z = true
-direction = Vector3(0, -1, 0)
-gravity = Vector3(0, 196, 0)
-initial_velocity_min = 400.0
-initial_velocity_max = 550.0
-angular_velocity_min = -90.0
-angular_velocity_max = 90.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
-angle_min = -90.0
-angle_max = 90.0
-scale_min = 0.3
-scale_max = 0.3
-turbulence_enabled = true
-turbulence_noise_strength = 6.15
-turbulence_noise_scale = 1.56
-anim_offset_max = 1.0
 
 [node name="Main" type="Node2D" groups=["main"]]
 script = ExtResource("1_fnt08")
@@ -58,7 +40,7 @@ material = SubResource("CanvasItemMaterial_nt0h7")
 position = Vector2(123, 139)
 emitting = false
 amount = 75
-process_material = SubResource("ParticleProcessMaterial_ujmiu")
+process_material = ExtResource("6_34vkj")
 texture = ExtResource("7_4m6eo")
 lifetime = 5.0
 one_shot = true
