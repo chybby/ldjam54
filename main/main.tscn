@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d0txdy4ut16pl" path="res://scenes/levels/level_1.tscn" id="2_stmhf"]
 [ext_resource type="PackedScene" uid="uid://qx85m3e0prw1" path="res://ui/hud/hud.tscn" id="4_iouj8"]
 [ext_resource type="PackedScene" uid="uid://b0cu7pk7yyxkr" path="res://menus/settings/settings.tscn" id="5_pbaip"]
-[ext_resource type="AudioStream" uid="uid://ckmf3x8yd47pn" path="res://main/bg_music_extras.mp3" id="6_1et4g"]
+[ext_resource type="AudioStream" uid="uid://c7iw6ffcaulqh" path="res://assets/success.mp3" id="7_3qbs1"]
 
 [node name="Main" type="Node2D" groups=["main"]]
 script = ExtResource("1_fnt08")
@@ -22,6 +22,7 @@ unique_name_in_owner = true
 [node name="Settings" parent="." instance=ExtResource("5_pbaip")]
 visible = false
 
-[node name="Audio" type="AudioStreamPlayer" parent="."]
+[node name="SuccessAudioPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("6_1et4g")
+process_mode = 3
+stream = ExtResource("7_3qbs1")

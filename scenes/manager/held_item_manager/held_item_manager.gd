@@ -1,7 +1,9 @@
 extends Node2D
 
 var held_item: Node2D
-
+@onready var place_sound := preload("res://assets/place_sound1.mp3")
+@onready var uproot_sound := preload("res://assets/uproot_sound1.mp3")
+@onready var audio := %Audio
 
 func _input(event: InputEvent) -> void:
     if event is InputEventMouseMotion:
@@ -19,6 +21,8 @@ func hold_item(item: Node2D) -> void:
     item.get_parent().remove_child(item)
     add_child(item)
     item.global_position = get_viewport().get_mouse_position()
+    audio.stream = uproot_sound
+    audio.play()
 
 
 func release_item() -> Node2D:
@@ -26,4 +30,6 @@ func release_item() -> Node2D:
     remove_child(held_item)
     var item = held_item
     held_item = null
+    audio.stream = place_sound
+    audio.play()
     return item
