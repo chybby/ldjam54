@@ -17,3 +17,6 @@ How to play:
 Made for [Ludum Dare 54](https://ldjam.com/events/ludum-dare/54/picky-plants) by Jelly and Dome.
 
 Made in Godot 4.1. All art and audio were made from scratch during the jam.
+
+Post Jam Patches:
+4/10/23: Fix tooltip changing when swapping plants.
