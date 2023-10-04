@@ -22,6 +22,7 @@ var tooltip_tween: Tween
 
 func _ready():
     GameEvents.plant_area_interacted.connect(set_tooltip)
+    GameEvents.plant_swapped.connect(set_tooltip_force)
     next_level_button.pressed.connect(on_next_level_button_pressed)
 
     await get_tree().process_frame
@@ -61,18 +62,27 @@ func set_level_name(level_name: String, level_number: int) -> void:
         .set_trans(Tween.TRANS_BACK)\
         .set_delay(0.5)
 
-
 func set_tooltip(text: String):
-    var held_item_manager = get_tree().get_first_node_in_group("held_item_manager")
-    if held_item_manager != null and not held_item_manager.is_empty():
-        return
+    _set_tooltip(text, true)
+
+func set_tooltip_force(text: String):
+    _set_tooltip(text, false)
+
+func _set_tooltip(text: String, check_held_item: bool):
+    if check_held_item:
+        var held_item_manager = get_tree().get_first_node_in_group("held_item_manager")
+        if held_item_manager != null and not held_item_manager.is_empty():
+            return
 
     # Can't set text to other text until text is cleared so queue it up.
-    if target_tooltip_text != "" and text != "":
-        next_text = text
-    if text == "" and next_text != "":
-        target_tooltip_text = next_text
-        next_text = ""
+    if check_held_item:
+        if target_tooltip_text != "" and text != "":
+            next_text = text
+        if text == "" and next_text != "":
+            target_tooltip_text = next_text
+            next_text = ""
+        else:
+            target_tooltip_text = text
     else:
         target_tooltip_text = text
 

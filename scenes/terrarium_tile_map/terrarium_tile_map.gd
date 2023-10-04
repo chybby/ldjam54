@@ -211,7 +211,6 @@ func handle_click(coords: Vector2i) -> void:
 #    print("Obstacle at %s is %s" % [coords, get_obstacle(coords)])
 #    print("Plant at %s is %s" % [coords, get_plant(coords)])
 
-    # TODO: swap held and clicked plants?
     if held_item_manager.held_item == null and get_plant(coords) != null:
         # Uprooting a plant.
         var plant = uproot_plant(coords)
@@ -229,6 +228,7 @@ func handle_click(coords: Vector2i) -> void:
         uprooted_plant.emit_dirt()
         place_plant(held_item_manager.release_item(), coords)
         held_item_manager.hold_item(uprooted_plant)
+        GameEvents.emit_plant_swapped(uprooted_plant.INFO_TEXT)
         state_changed.emit()
 
 
